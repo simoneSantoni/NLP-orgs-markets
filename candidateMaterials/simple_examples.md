@@ -8,4 +8,4 @@ Intro to word  vectors
 
 
 
-  [1](https://dzone.com/articles/introduction-to-word-vectors)
+[1]: https://dzone.com/articles/introduction-to-word-vectors
