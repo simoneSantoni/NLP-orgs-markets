@@ -164,7 +164,7 @@ Organization of the Module
 The below-displayed table illustrates the schedule of the module.
 **Note:** depending on the progress of the class throughout the term,
 the set of topics included in the below-displayed table could be subject
-to **minor changes****minor changes****minor changes****minor changes****minor changes****minor changes****minor changes****minor changes****minor changes**.
+to **minor changes**.
 
 Each block of the program has both theory and applications. I will cover
 the *theory part* in a series of Coursera-alike video-recordings. The
