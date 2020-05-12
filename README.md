@@ -10,7 +10,7 @@ Instructor
 
 **Contacts:** 020 7040 0057 ― [simone.santoni.1\@city.ac.uk](mailto:)
 
-**Webinar:** Wednesday ― ― 12:00 - 13:30 (via Zoom)
+**Webinar:** Wednesday ― 12:00 - 13:30 (via Zoom)
 
 **Office hour:** Wednesday ― 13:30 - 14:30 (via MS Teams)
 
@@ -187,57 +187,57 @@ MS Teams is the main communication channel; the GitHub repo of the
 module ― constantly updates ― contains all the relevant scripts
 along with companion materials.
 
-| Week        | Agenda                                                                          |
-|-------------|---------------------------------------------------------------------------------|
-| 1 (20 - 05) | Introduction to SMM694                                                          |
-|             | + organization of the module                                                    |
-|             | Overview of NLP                                                                 |
-|             | + conceptual and methodological roots                                           |
-|             | + scope of application                                                          |
-|             | + established tools                                                             |
-|             | + hot topics                                                                    |
-|             | A Python environment for NLP                                                    |
-|             | + NLP pipelines (spaCy)                                                         |
-|             | + NLP analysis packages (Gensim, Stanza)                                        |
-|             | + NLP with Deep Learning (PyTorch)                                              |
-|             | + technical and scientific computation (NumPy)                                  |
-|             | + ML (scikit-learn)                                                             |
-|             | Webinar                                                                         |
-|             | + Q\&A session                                                                  |
-|             | + regular expressions                                                           |
-|             | + words and text corpora                                                        |
-|             | + text normalization                                                            |
-|             | + minimum edit distance                                                         |
-| 2 (27-05)   | Representing words and meanings                                                 |
-|             | + words and meanings in linguistics                                             |
-|             | + words and meanings in machines                                                |
-|             | + from WordNet, through discrete symbols, to word vectors and \texttt{word2vec} |
-|             | Language modeling                                                               |
-|             | + pre-DL: N-gram modeling                                                       |
-|             | + post-DL: neural nets and neural language models                               |
-|             | + part-of-speech tagging                                                        |
-|             | + parsing                                                                       |
-|             | + named entity recognition                                                      |
-|             | + vectors                                                                       |
-|             | Webinar                                                                         |
-|             | + Q\&A session                                                                  |
-|             | + using WordNet with NLTK                                                       |
-|             | + loading a pre-trained model of language (spaCy, Stanza)                       |
-|             | + processing text through NLP pipelines (spaCy, Stanza)                         |
-|             | + leveraging word vectors (NumPy)                                               |
-| 3 (03-06)   | Vector semantics and embeddings                                                 |
-|             | + \texttt{word2vec}                                                             |
-|             | + visualizing embeddings                                                        |
-|             | + semantic properties of embeddings                                             |
-|             | + bias and embeddings                                                           |
-|             | + evaluating vector models                                                      |
-|             | + \texttt{doc2vec}                                                              |
-|             | Webinar                                                                         |
-|             | + Q\&A session                                                                  |
-|             | + training word embeddings (Gensim)                                             |
-|             | + training document embeddings (Gensim)                                         |
-|             | + passing embeddings through ML pipelines (scikit-learn)                        |
-|             | + network analysis of embeddings (NetworkX)                                     |
+| Week          | Agenda                                                                          |
+|---------------|---------------------------------------------------------------------------------|
+| *1 (20 - 05)* | *Introduction to SMM694*                                                        |
+|               | ― organization of the module                                                    |
+|               | *Overview of NLP*                                                               |
+|               | ― conceptual and methodological roots                                           |
+|               | ― scope of application                                                          |
+|               | ― established tools                                                             |
+|               | ― hot topics                                                                    |
+|               | *A Python environment for NLP*                                                  |
+|               | ― NLP pipelines (spaCy)                                                         |
+|               | ― NLP analysis packages (Gensim, Stanza)                                        |
+|               | ― NLP with Deep Learning (PyTorch)                                              |
+|               | ― technical and scientific computation (NumPy)                                  |
+|               | ― ML (scikit-learn)                                                             |
+|               | *Webinar*                                                                       |
+|               | ― Q&A session                                                                   |
+|               | ― regular expressions                                                           |
+|               | ― words and text corpora                                                        |
+|               | ― text normalization                                                            |
+|               | ― minimum edit distance                                                         |
+| *2 (27-05)*   | *Representing words and meanings*                                               |
+|               | ― words and meanings in linguistics                                             |
+|               | ― words and meanings in machines                                                |
+|               | ― from WordNet, through discrete symbols, to word vectors and \texttt{word2vec} |
+|               | *Language modeling*                                                             |
+|               | ― pre-DL: N-gram modeling                                                       |
+|               | ― post-DL: neural nets and neural language models                               |
+|               | ― part-of-speech tagging                                                        |
+|               | ― parsing                                                                       |
+|               | ― named entity recognition                                                      |
+|               | ― vectors                                                                       |
+|               | *Webinar*                                                                       |
+|               | ― Q&A session                                                                   |
+|               | ― using WordNet with NLTK                                                       |
+|               | ― loading a pre-trained model of language (spaCy, Stanza)                       |
+|               | ― processing text through NLP pipelines (spaCy, Stanza)                         |
+|               | ― leveraging word vectors (NumPy)                                               |
+| *3 (03-06)*     | *Vector semantics and embeddings*                                               |
+|               | ― \texttt{word2vec}                                                             |
+|               | ― visualizing embeddings                                                        |
+|               | ― semantic properties of embeddings                                             |
+|               | ― bias and embeddings                                                           |
+|               | ― evaluating vector models                                                      |
+|               | ― \texttt{doc2vec}                                                              |
+|               | *Webinar*                                                                       |
+|               | ― Q&A session                                                                   |
+|               | ― training word embeddings (Gensim)                                             |
+|               | ― training document embeddings (Gensim)                                         |
+|               | ― passing embeddings through ML pipelines (scikit-learn)                        |
+|               | ― network analysis of embeddings (NetworkX)                                     |
 
 
 
