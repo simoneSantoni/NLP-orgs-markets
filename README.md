@@ -122,7 +122,7 @@ contribute to the final mark (FM) as follows:
 
 FM = 0.25 X MTP + 0.75 X FCP
 
-For the **MTP** ― launched in week 3 ―, students are required to
+For the **MTP** ― to be launched in week 3 ―, students are required to
 conduct a review of the literature project. This year's MTP focuses on
 the topic of 'embeddings'. Submissions will be assessed on a
 0 - 100 \% scale. In case of failure, groups can resubmit a revised
@@ -130,7 +130,7 @@ version of the project; if the revision is sufficient, students receive
 a 50% mark. The deadline for the project is June 11 (8:00 PM London
 Time).
 
-For the **FCP** ― launched in week 5 ―, students are supposed:
+For the **FCP** ― to be launched in week 5 ―, students are supposed:
 
 1.  to prepare and analyze a real-world dataset containing
     press-releases, business reports, and financial analysts reports
