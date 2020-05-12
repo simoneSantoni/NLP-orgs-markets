@@ -189,7 +189,7 @@ along with companion materials.
 
 | Week (date)     | Agenda                                                                 |
 |-----------------|------------------------------------------------------------------------|
-| **1 (20 - 05)** | **Introduction to SMM694**                                             |
+| **1 (20-05)** | **Introduction to SMM694**                                             |
 |                 | ― organization of the module                                           |
 |                 | **Overview of NLP**                                                    |
 |                 | ― conceptual and methodological roots                                  |
