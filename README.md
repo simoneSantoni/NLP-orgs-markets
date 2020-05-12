@@ -161,7 +161,7 @@ effectiveness of the proposed solution. One bonus point
 Organization of the Module
 ==========================
 
-[Table 1](#building_blocks) illustrates the schedule of the module.
+The below-displayed table illustrates the schedule of the module.
 **Note:** depending on the progress of the class throughout the term,
 the set of topics included in the below-displayed table could be subject
 to .
