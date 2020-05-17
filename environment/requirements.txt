@@ -1,0 +1,9 @@
+gensim
+networkx
+numpy
+nltk
+pyLDAvis
+pytorch
+sklearn
+spacy
+stanza
