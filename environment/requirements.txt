@@ -2,8 +2,8 @@ gensim
 networkx
 numpy
 nltk
-pyldavis
+#pyldavis
 pytorch
 scikit-learn
 spacy
-stanza
+#stanza
