@@ -16,3 +16,17 @@ Conda users do:
 ```{python}
 conda install --file requirements.txt
 ```
+
+Note for Conda users: pyLDAvis and Staza are not available via the official conda channel.
+
+Stanza can be installed as follows:
+
+```{python}
+conda install -c stanfordnlp stanza
+```
+
+pyLDAvis can be installed as follows:
+
+```{python}
+conda install -c conda-forge pyldavis
+```
