@@ -156,7 +156,7 @@ equal weight in terms of mark.
 these problem sets and present their solution to the class. One student
 per session will be selected on the basis of the novelty and
 effectiveness of the proposed solution. One bonus point
-(\delta FM = +1) will be assigned.
+(delta FM = +1) will be assigned.
 
 Organization of the Module
 ==========================
