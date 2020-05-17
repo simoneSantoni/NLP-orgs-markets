@@ -168,7 +168,7 @@ to **minor changes**.
 
 Each block of the program has both theory and applications. I will cover
 the *theory part* in a series of Coursera-alike video-recordings. The
-main focus will be the Jupyter slideshow; on the bottom-right corner of
+main focus will be the Jupyter slideshow; on the top-right corner of
 the screen you will see my
 [Mini-Me](https://en.wikipedia.org/wiki/Mini-Me) hand-waving for circa
 one hour. I will release the video-recordings on a weekly basis ―
@@ -258,7 +258,7 @@ along with companion materials.
 |                 | ― supervised learning of word sentiment                                |
 |                 | **Webinar**                                                            |
 |                 | ― Q&A session                                                          |
-|                 | ― `simple' sentiment analysis (PyTorch)                                |
+|                 | ― 'simple' sentiment analysis (PyTorch)                                |
 |                 | ― convolutional sentiment analysis (PyTorch)                           |
 |                 | ― multi-class sentiment analysis (PyTorch)                             |
 |                 | ― aspect-based sentiment analysis (PyTorch)                            |
