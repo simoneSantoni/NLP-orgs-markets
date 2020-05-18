@@ -21,7 +21,7 @@ In Week 1, the attention revolves around:
 
 | Week (date)     | Agenda                                                                 |
 |-----------------|------------------------------------------------------------------------|
-| **1 (20-05)**   | **Introduction to SMM694**                                               |
+| **1 (20-05)**   | **Introduction to SMM694**                                             |
 |                 | ― organization of the module                                           |
 |                 | **Overview of NLP**                                                    |
 |                 | ― conceptual and methodological roots                                  |
@@ -61,3 +61,10 @@ Below are the materials at the center of week 1
   - a Python environment for NLP: `v_1`
 + Python scripts/Jupyter notebooks used in the webinar:
   - to be populated after next week's webinar
+
+
+Assignments
+===========
+
++ no problem set is due
++ no coursework due
