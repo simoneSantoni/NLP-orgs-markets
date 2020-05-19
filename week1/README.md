@@ -49,7 +49,7 @@ Materials
 Below are the materials at the center of week 1
 
 + readings: 
-  - lecture notes: `ln_w1.ipynb`
+  - lecture notes: [`ln_w1.ipynb`](week1/ln_1.ipynb)
   - journal articles:
       * [example of 'simple' sentiment analysis](https://srdas.github.io/Papers/chat_FINAL.pdf)
       * [example of topic modeling](https://www.amyzang.org/uploads/2/6/5/5/26555370/publication_huang_lehavy_zang_and_zheng_2018_ms.pdf)
