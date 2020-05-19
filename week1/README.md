@@ -5,6 +5,7 @@ Week 1 ― README
 
 * [Overview](#overview)
 * [Materials](#materials)
+* [Assignments](#assignments)
 
 <!-- vim-markdown-toc -->
 
