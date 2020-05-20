@@ -11,9 +11,14 @@ Week 1 webinar
     * [Popular operators](#popular-operators)
 * [Words, text corpus, and text corpora](#words-text-corpus-and-text-corpora)
     * [Text normalization](#text-normalization)
+* [Minimum-edit-distance](#minimum-edit-distance)
 
 <!-- vim-markdown-toc -->
 
+The following sections quickly illustrate some key concepts and basic tools that
+turn to be useful to manipulate textual data.
+
+Each section has an application counterpart in the Python script `wb_1.py`.
 
 Regular expressions
 ===================
@@ -55,7 +60,6 @@ Learning regex by (simple) examples
 
 Consider these sample sentences:
 
-```{bash}
 'Apple laptops are for starbucksers'
 
 'Did an apple really fall on Isaac Newton's head?'
@@ -70,7 +74,7 @@ Consider these sample sentences:
 
 'The CEO of alfa announced the acquisition of beta. The reaction of
 stakeholders has been positive.'
-```
+
 Let's see regex in action:
 
 + regex are case sensitive
@@ -100,8 +104,8 @@ Source: Jurafski and Martin, 2008
 Words, text corpus, and text corpora
 ====================================
 
-+ words are the fundamental unit of observations
-+ words that appear in a same document constitute a corpus of text
++ words are the fundamental unit of observations in any NLP pipeline
++ the set of words that appear in the same document constitute a corpus of text
 + collections of documents constitute text corpora
 
 Text normalization
@@ -114,3 +118,9 @@ normalization process:
 1. Tokenizing (segmenting) words 
 2. Normalizing word formats 
 3. Segmenting sentences
+
+
+Minimum-edit-distance
+=====================
+
+
