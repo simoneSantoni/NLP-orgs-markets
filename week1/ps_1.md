@@ -32,7 +32,7 @@ Using pure Python code and the `re` module:
 1. extract the birth date of Diplo (note: stick with the format reported in the
     raw data, namely, `month` (in letters) + `whitespace` + `day` + `comma` +
     `year`
-2. extract the number at which Diplo's albunm Revolution debuted in 2013
+2. extract the number at which Diplo's album Revolution debuted in 2013
 3. extract the names of Diplo's collaborators
 
 
