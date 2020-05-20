@@ -35,6 +35,7 @@ Learning regex by (simple) examples
 
 Consider these sample sentences:
 
+```{bash}
 'Apple laptops are for starbucksers'
 
 'Did an apple really fall on Isaac Newton's head?'
@@ -49,7 +50,7 @@ Consider these sample sentences:
 
 'The CEO of alfa announced the acquisition of beta. The reaction of
 stakeholders has been positive.'
-
+```
 Let's see regex in action:
 
 + regex are case sensitive
