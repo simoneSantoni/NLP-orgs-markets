@@ -123,4 +123,11 @@ normalization process:
 Minimum-edit-distance
 =====================
 
+As Jurafski and Martin observe:
 
+    Much of natural language processing is concerned with measuring how 
+    similar two strings are.
+
+A series of metrics have been proposed over time to capture the idea of
+string similarity. This topic will be discussed in the context of word
+vectors and embeddings in week 3.
