@@ -61,11 +61,12 @@ Below are the materials at the center of week 1
   - organization of the module: `v_0`
   - a Python environment for NLP: `v_1`
 + Python scripts/Jupyter notebooks used in the webinar:
-  - to be populated after next week's webinar
+  - `wb_1.md`: key concepts and tools for text manipulation
+  - `wb_1.py`: Python script used for the application on regex and text normalization
 
 
 Assignments
 ===========
 
 + no problem set is due
-+ no coursework due
++ `ps_1`: problem set due by May 26 (8:00 PM). Non mandatory. Send your solution to simone.santoni.1@city.ac.uk
