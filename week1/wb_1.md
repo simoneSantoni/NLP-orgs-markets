@@ -1,5 +1,25 @@
+Week 1 webinar
+==============
+
+<!-- vim-markdown-toc GFM -->
+
+* [Regular expressions](#regular-expressions)
+    * [Text and machines](#text-and-machines)
+    * [Regex as a pipeline](#regex-as-a-pipeline)
+    * [Regex in Python](#regex-in-python)
+    * [Learning regex by (simple) examples](#learning-regex-by-simple-examples)
+    * [Popular operators](#popular-operators)
+* [Words, text corpus, and text corpora](#words-text-corpus-and-text-corpora)
+    * [Text normalization](#text-normalization)
+
+<!-- vim-markdown-toc -->
+
+
+Regular expressions
+===================
+
 Text and machines
-=================
+-----------------
 
 How do machines think about text?
 
@@ -11,7 +31,7 @@ How do machines think about text?
 
 
 Regex as a pipeline
-===================
+-------------------
 
 + formally, a regular expression is an "algebraic notation for characterizing a
     set of strings" (Jurafski and Martin, 2008)
@@ -22,7 +42,7 @@ Regex as a pipeline
     is, the language f machines)
 
 Regex in Python
-===============
+---------------
 
 + Python implements the so-called 'extended regular expressions' parser
 + caveat: if you use other programming languages (that rely on different 
@@ -31,7 +51,7 @@ Regex in Python
     has stellar quality documentation
 
 Learning regex by (simple) examples
-===================================
+-----------------------------------
 
 Consider these sample sentences:
 
@@ -63,7 +83,7 @@ Let's see regex in action:
 + grouping
 
 Popular operators
-=================
+-----------------
 
 | RE | Expansion    | Match              | First Matches     |
 |----|--------------|--------------------|-------------------|
@@ -84,7 +104,7 @@ Words, text corpus, and text corpora
 + collections of documents constitute text corpora
 
 Text normalization
-==================
+------------------
 
 Before almost any natural language processing of a text, the text has to be
 normalized. At least three tasks are commonly applied as part of any
