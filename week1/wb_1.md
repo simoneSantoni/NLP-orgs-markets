@@ -1,11 +1,32 @@
-Week 1 webinar, part 1/3
-========================
+Week 1 webinar
+==============
 
+<!-- vim-markdown-toc GFM -->
+
+* [Regular expressions](#regular-expressions)
+    * [Text and machines](#text-and-machines)
+    * [Regex as a pipeline](#regex-as-a-pipeline)
+    * [Regex in Python](#regex-in-python)
+    * [Learning regex by (simple) examples](#learning-regex-by-simple-examples)
+    * [Popular operators](#popular-operators)
+* [Words, text corpus, and text corpora](#words-text-corpus-and-text-corpora)
+    * [Text normalization](#text-normalization)
+* [Minimum-edit-distance](#minimum-edit-distance)
+
+<!-- vim-markdown-toc -->
+
+The following sections quickly illustrate some key concepts and basic tools that
+turn to be useful to manipulate textual data.
+
+Each section has an application counterpart in the Python script `wb_1.py`.
+
+Regular expressions
+===================
 
 Text and machines
-=================
+-----------------
 
-**How do machines think about text?**
+How do machines think about text?
 
 + answering this question is key to understand how to search for, retrieve, and
     edit patterns of text
@@ -15,7 +36,7 @@ Text and machines
 
 
 Regex as a pipeline
-===================
+-------------------
 
 + formally, a regular expression is an "algebraic notation for characterizing a
     set of strings" (Jurafski and Martin, 2008)
@@ -25,9 +46,8 @@ Regex as a pipeline
     language (the one we, humans, speak) with the world of formal language (that
     is, the language f machines)
 
-
 Regex in Python
-===============
+---------------
 
 + Python implements the so-called 'extended regular expressions' parser
 + caveat: if you use other programming languages (that rely on different 
@@ -35,13 +55,11 @@ Regex in Python
 + the [`re`](https://docs.python.org/3/library/re.html) module for Python 
     has stellar quality documentation
 
-
 Learning regex by (simple) examples
-===================================
+-----------------------------------
 
 Consider these sample sentences:
 
-```{bash
 'Apple laptops are for starbucksers'
 
 'Did an apple really fall on Isaac Newton's head?'
@@ -56,7 +74,6 @@ Consider these sample sentences:
 
 'The CEO of alfa announced the acquisition of beta. The reaction of
 stakeholders has been positive.'
-```
 
 Let's see regex in action:
 
@@ -70,9 +87,8 @@ Let's see regex in action:
 + disjunctions 
 + grouping
 
-
 Popular operators
-=================
+-----------------
 
 | RE | Expansion    | Match              | First Matches     |
 |----|--------------|--------------------|-------------------|
@@ -85,17 +101,15 @@ Popular operators
 
 Source: Jurafski and Martin, 2008
 
-
 Words, text corpus, and text corpora
 ====================================
 
-+ words are the fundamental unit of observations
-+ words that appear in a same document constitute a corpus of text
++ words are the fundamental unit of observations in any NLP pipeline
++ the set of words that appear in the same document constitute a corpus of text
 + collections of documents constitute text corpora
 
-
 Text normalization
-==================
+------------------
 
 Before almost any natural language processing of a text, the text has to be
 normalized. At least three tasks are commonly applied as part of any
@@ -106,3 +120,14 @@ normalization process:
 3. Segmenting sentences
 
 
+Minimum-edit-distance
+=====================
+
+As Jurafski and Martin observe:
+
+    Much of natural language processing is concerned with measuring how 
+    similar two strings are.
+
+A series of metrics have been proposed over time to capture the idea of
+string similarity. This topic will be discussed in the context of word
+vectors and embeddings in week 3.

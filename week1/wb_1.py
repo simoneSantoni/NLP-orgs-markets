@@ -10,7 +10,12 @@ Author: Simone Santoni, simone.santoni.1@city.ac.uk
 
 Edits: create ; last edit .
 
-Notes: NaN
+Contents:
+
+    - regex
+    - words, text corpus, text corpora
+    - text normalization
+    - minimum edit distance
 
 """
 
@@ -137,3 +142,4 @@ unique_entities = s4.replace('apples', 'apple')
 
 # -- segmenting sentences
 segmnted_corpus = [word.strip() for word in s6.split('.')]
+
