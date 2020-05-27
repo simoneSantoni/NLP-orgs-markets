@@ -1,0 +1,72 @@
+<section id="week-2" class="slide level1">
+<h1>Week 2</h1>
+<p>Main topics:</p>
+<ul>
+<li>Representing words and meanings</li>
+<li>Language modeling</li>
+</ul>
+</section>
+<section id="agenda" class="slide level1">
+<h1>Agenda</h1>
+<!-- toc -->
+<ul>
+<li><a href=""></a></li>
+<li><a href=""></a></li>
+<li><a href=""></a></li>
+</ul>
+<!-- toc -->
+</section>
+<section id="models-of-natural-language-nl" class="slide level1">
+<h1>Models of Natural Language (NL)</h1>
+<p><strong>What</strong> is an NL model?</p>
+<p><strong>How</strong> do we build an NL model?</p>
+<p><strong>Why</strong> should we care about NL models?</p>
+<p>… let’s focus on the <strong>why</strong> aspect first.</p>
+</section>
+<section id="why-do-we-care-about-nl-models" class="slide level1">
+<h1>Why do we care about NL models?</h1>
+<p>Let’s consider tokenization, a core task to any natural language processing analysis.</p>
+<p>Now, let’s apply different tokenizers to the below displayed sentence:</p>
+<pre class="{python}"><code>s = &quot;&quot;&quot;Back in the golden age of hip-hop
+       (the late &#39;80s, youngsters), Rakim took
+       lyricism to unfathomable heights,
+       helping to usher in the wave of lethal
+       MCs like Big Daddy Kane and Kool G Rap,
+       who would go on to become icons. Two
+       decades later, some of Ra&#39;s rhymes from
+       &#39;86 are still over people&#39;s heads: His
+       wordplay remains a hip-hop measuring
+       stick.&quot;&quot;&quot;</code></pre>
+</section>
+<section id="different-tokenizers-in-action" class="slide level1">
+<h1>Different tokenizers in action</h1>
+<p>:::::::::::::: {.columns} ::: {.column width=“33%”} Naive tokenizer ::: ::: {.column width=“33%”} NLTK ::: {.column width=“33%”} spaCy ::::::::::::::</p>
+</section>
+<section id="naive-tokenizer" class="slide level1">
+<h1>Naive tokenizer</h1>
+<pre class="{python}"><code></code></pre>
+<h2 id="naive-tokenizer-1">Naive tokenizer</h2>
+<h2 id="nltk-tokenizers">NLTK tokenizers</h2>
+<h2 id="n-grams-tokenizers">N-grams &amp; tokenizers</h2>
+</section>
+<section id="modeling-natural-language-main-challenges" class="slide level1">
+<h1>Modeling natural language: Main challenges</h1>
+<p>Processing raw text intelligently is difficult:</p>
+<ul>
+<li>it’s common for words that look completely different to mean almost the same thing</li>
+<li>the same words in a different order can mean something completely different</li>
+<li>most words are rare</li>
+<li>even splitting text into useful word-like units can be difficult in many languages (see Japanese)</li>
+</ul>
+<p><em>Source</em> is <a href="https://spacy.io/usage/linguistic-features">spaCy website</a></p>
+</section>
+<section id="how-do-we-build-nl-models" class="slide level1">
+<h1>How do we build NL models?</h1>
+<ul>
+<li>pre-DL models of the language</li>
+<li>post-DL models of the language</li>
+</ul>
+</section>
+<section id="the-architecture-of-natural-language-models" class="slide level1">
+<h1>The architecture of Natural Language Models</h1>
+</section>
