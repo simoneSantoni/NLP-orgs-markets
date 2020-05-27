@@ -70,9 +70,6 @@ print(q)
 q = re.search('[^Ap]', s0)
 print(q)
 
-q = re.search('[^Ap]', s0)
-print(q)
-
 q = re.search('[^a-z]', s0)
 print(q)
 
@@ -126,7 +123,7 @@ print(q)
 
 # %% words, text corpus, and text corpora
 
-# -- a corpus of documents as a string
+# -- a corpus of text as a string
 print(s0)
 
 # -- a text corpora
@@ -140,6 +137,7 @@ tokens = s0.split(' ')
 
 # -- normalizing word formats
 base_form_of_verbs = s5.replace('ran', 'run')
+
 unique_entities = s4.replace('apples', 'apple')
 
 # -- segmenting sentences
