@@ -1,11 +1,16 @@
-Materials
-=========
+Week 2 ― README
+===============
 
 <!-- vim-markdown-toc GFM -->
 
+* [Materials](#materials)
 * [Assignments](#assignments)
 
 <!-- vim-markdown-toc -->
+
+Materials
+=========
+
 Below are the materials at the center of week 1
 
 + readings: 
