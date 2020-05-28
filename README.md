@@ -1,8 +1,6 @@
 SMM694 ― Applied NLP
 =====================
 
-
-
 Instructor
 ==========
 
