@@ -1,13 +1,11 @@
-<!-- vim-markdown-toc GFM -->
-
-* [Materials](#materials)
-* [Assignments](#assignments)
-
-<!-- vim-markdown-toc -->
-
 Materials
 =========
 
+<!-- vim-markdown-toc GFM -->
+
+* [Assignments](#assignments)
+
+<!-- vim-markdown-toc -->
 Below are the materials at the center of week 1
 
 + readings: 
