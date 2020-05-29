@@ -1,19 +1,9 @@
-Data trasnformation - README
-============================
+Tutorial 0 ― README
+====================
 
-<!-- vim-markdown-toc GFM -->
+This tutorial deals with the folloing topics:
 
-* [Overview of the scripts](#overview-of-the-scripts)
++ NLP pipeline
++ creating text dictionaries and corpora
 
-<!-- vim-markdown-toc -->
-
-This folder contains some scripts to transform the (mainly) NL data.
-
-Overview of the scripts
-=======================
-
-| Script | Scope                               | Status   | Notes |
-|--------|-------------------------------------|----------|-------|
-| _0.py  | press data, dictionary + corpus     | on going | NaN   |
-| _1.py  | websearch data, dictionary + corpus | on going | NaN   |
-
+spaCy and Gensim are required libraries to reproduce the tutorial.
