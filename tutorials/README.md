@@ -11,5 +11,5 @@ also offer some basic NLP recipes that may be useful for future projects.
 | _0                          | NLP pipeline; creating text dictionaries and corpora | ~ 4,300 press articles from FT and WSJ        | Genism, spaCy |
 | _1 (to be released shortly) | NLP pipeline                                         | TBD                                           | Stanza        |
 | _2 (to be released shortly) | Word vectors and linear algebra                      | word2vec embedding of the Google News dataset | NumPy/Scipy   |
-| _3 (to be released shortly) | Minimum edit distance                                | None                                          |               |
+| _3 (to be released shortly) | Minimum edit distance                                | None                                          |   None            |
 | _4 (to be released shortly) | WordNet                                | None                                          |  NLTK             |
