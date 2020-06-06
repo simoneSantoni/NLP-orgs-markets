@@ -1,4 +1,4 @@
-Tutorial _1 ― README
+Tutorial 1 ― README
 ===================
 
 This tutorial deals with the following topics:
