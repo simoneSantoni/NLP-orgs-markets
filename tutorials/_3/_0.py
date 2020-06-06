@@ -17,7 +17,7 @@ Notes: Appreciating the approximate or phonetic distance between two string
        deletions, and substitutions required to change one word to another.
 
        One possible application
-       is identifying succesful patch/code submissions on the part of 
+       is identifying successful patch/code submissions on the part of 
        developers or data scientists working in a team setting 
        (e.g., GitHub teams). For example, the members of the Linux Kernel 
        community exchange their code using the mailing list of the project, 
