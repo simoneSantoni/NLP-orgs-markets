@@ -41,6 +41,7 @@ We will fetch the Word2Vec model trained on part of the Google News dataset.
 !!! This is a large file, ~ 1.7 GB in memory ¡¡¡
 '''
 
+
 # %% load word2vec vectors
 wv = api.load('word2vec-google-news-300')
 
@@ -180,5 +181,5 @@ plt.legend(loc='best')
 # --+ grid
 plt.grid(True, linestyle='--', alpha=0.5)
 # --+ save figure
-plt.savefig("alter_word_clusters.pdf", format='pdf', bbox_inches='tight')
+plt.savefig('alter_word_clusters.pdf', bbox_inches='tight')
 
