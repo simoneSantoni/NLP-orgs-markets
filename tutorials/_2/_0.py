@@ -60,27 +60,6 @@ for artist in artists:
         pass
 
 
-# retrieving words in the neighborhood of each artist
-
-# --+ empty containers
-embedding_clusters = []
-word_clusters = []
-
-# --+ iterate over artists
-for artist in artists:
-    # temporary lists
-    embeddings = []
-    words = []
-    for similar_word, _ in wv.most_similar(artist, topn=30):
-        # retrieve words
-        words.append(similar_word)
-        # retrieve vectors
-        embeddings.append(wv[similar_word])
-    # append temporary lists
-    embedding_clusters.append(embeddings)
-    word_clusters.append(words)
-
-
 # %% let's use NumPy/Scipy to manipulate the retrieved word vectors
 
 # getting the covariance matrix of word vectors associated with focal artists
@@ -90,7 +69,6 @@ representations of artists are associated
 '''
 
 # --+ cosine similarity matrix
-
 # ----+ empty list
 cs = []
 
