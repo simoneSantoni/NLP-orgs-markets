@@ -1,7 +1,7 @@
 Week 4 ― README
 ===============
 
-<!-- vim-markdown-toc GFM -->
+!-- vim-markdown-toc GFM -->
 
 * [Materials](#materials)
 * [Assignments](#assignments)
@@ -16,9 +16,10 @@ Below are the materials at the center of week 1
 + readings: 
   - lecture notes: [`ln_4.pdf`](week4/ln_4.pdf)
   - journal articles:
-      * [][]
-      * [][]
-      * [][]
+      * [Latent Dirichlet Allocation][1]
+      * [Dynamic Topic Models][2]
+      * [Tooic Modeling in Management Research][3]
+      * [Reading Tea Leaves][4]
 + videos (shared via MS Teams):
   - topic modeling: `v_4`
 + Python scripts/Jupyter notebooks used in the webinar:
@@ -33,4 +34,7 @@ Assignments
   solution to simone.santoni.1@city.ac.uk
 
 
-  [ ]: url
+  [1]: http://www.jmlr.org/papers/volume3/blei03a/blei03a.pdf
+  [2]: https://dl.acm.org/doi/pdf/10.1145/1143844.1143859
+  [3]: https://repub.eur.nl/pub/116043/annals.2017.0099.pdf
+  [4]: http://papers.nips.cc/paper/3700-reading-tea-leaves-how-humans-interpret-topic-models.pdf
