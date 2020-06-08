@@ -20,11 +20,12 @@ Below are the materials at the center of week 1
 + videos (shared via MS Teams):
   - the duality between words and meanings (associated with the video): `v_2`
 + Python scripts/Jupyter notebooks used in the webinar:
-  - [`wb_2.ipynb`](week2/wb_2.ipynb): Jupyter notebook used for the application 
+  - [`wb_2.ipynb`](week2/wb_2.ipynb) Jupyter notebook used for the application 
 
 
 Assignments
 ===========
 
 + `ps_1` is due by May 27  (8:00 PM)
-+ `ps_2`: problem set due by June 2 (8:00 PM). Non mandatory. Send your solution to simone.santoni.1@city.ac.uk
++ `ps_2`: problem set due by June 2 (8:00 PM). Non mandatory. Send your 
+  solution to simone.santoni.1@city.ac.uk

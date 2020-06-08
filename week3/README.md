@@ -17,6 +17,7 @@ Below are the materials at the center of week 1
   - lecture notes: [`ln_3.ipynb`](week2/ln_2.ipynb)
   - journal articles:
       * [][]
+      * [][]
 + videos (shared via MS Teams):
   - word vectors: `v_3`
 + Python scripts/Jupyter notebooks used in the webinar:
