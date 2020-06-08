@@ -309,6 +309,8 @@ The following Python libraries will be used in the module:
 
 -   Gensim;
 
+-   Jellyfish
+
 -   NetworkX;
 
 -   NumPy;
