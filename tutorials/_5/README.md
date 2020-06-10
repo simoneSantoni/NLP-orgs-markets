@@ -3,24 +3,19 @@ Tutorial 5 ― README
 
 This tutorial deals with the following topics:
 
-+ word vectors
-+ manipulation of word vectors
-+ statistical post-processing of word vectors
++ topic modeling
++ visualization of topic modeling results
 
-NumPy, Gensim, Scikit-learn, Matplotlib are **required*** libraries to 
+Gensim, Matplotlib, and Pandas are **required*** libraries to 
 reproduce the tutorial.
 
 This Python script illustrates how:
 
-1. to load word vectors from a pre-trained model
+1. to load existing dictionaries, text corpora, and phrases 
 
-2. to fetch the word vectors associated with target entities
+2. to explore the statistical fit of competing topic modeling specifications
 
-3. to sample 'alter' words, i.e., words that are in the neighborhood
-   of a target vector
+3. to create term-to-topic matrices
 
-4. to fetch the word vectors associated with alter words
-
-5. to use dimensionality reduction techniques to explore the semantic
-   similarity across target and alter words
+4. (present longitudinal data) to appreciate the saliency of topics over time
 
