@@ -14,6 +14,8 @@ Below are the materials at the center of week 1
 
 + readings: 
   - lecture notes: [`ln_4.pdf`](week4/ln_4.pdf)
+  - compendium on indicators to assess the statistical fit of topic models 
+    [`compendium_4.pdf`](week4/compendium_4.pdf)
   - journal articles:
       * [Latent Dirichlet Allocation][1]
       * [Dynamic Topic Models][2]
