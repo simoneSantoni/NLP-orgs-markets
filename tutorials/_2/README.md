@@ -14,7 +14,7 @@ The Python script shows how to:
 
 2. fetch the word vectors associated with target entities
 
-3. compute the distance between any two vectors (that is their
+3. compute the distance between any two vectors (that is, their
    semantic (dis-)similarity)
 
 4. visually represent cosine similarity scores concerning a set of
