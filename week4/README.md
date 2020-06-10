@@ -1,7 +1,6 @@
 Week 4 ― README
 ===============
-
-!-- vim-markdown-toc GFM -->
+<!-- vim-markdown-toc GFM -->
 
 * [Materials](#materials)
 * [Assignments](#assignments)
