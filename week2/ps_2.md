@@ -1,7 +1,7 @@
 Week 2, problem set
 ===================
 
-Consider the press data included in tutorial `[_0][1]`. Using spaCy:
+Consider the press data included in tutorial [_0][1]. Using spaCy:
 
 1. pass the entire corpus of text (circa 4,300 articles) through an nlp pipeline (use 
    the en_core_web_lg mnodel of the English language to do that)
