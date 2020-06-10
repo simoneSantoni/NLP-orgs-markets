@@ -15,8 +15,9 @@ Notes: The corpus oftext contains documents published over circa 10 years.
        'Mallet' implementation of the LDA is required to reproduce this 
        tutorial. Download a copy of Mallet (v 2.0.8) here[1], move it to 
        the desired directory in your folder, and copy the absolute pathway
-       to update what you see in line 33 ('external software')
-       http://mallet.cs.umass.edu/download.php 
+       to update what you see in line 52 (under 'external software').
+
+       [1]: http://mallet.cs.umass.edu/download.php 
 
 """
 
@@ -42,47 +43,52 @@ os.chdir(wd)
 
 
 # %% viz options
-plt.style.use('seaborn-bright')
-rc('font',**{'family':'serif','serif':['Computer Modern Roman']})
-rc('text', usetex=True)
+'''
+Uncomment if you wanto Tufte alike charts
+'''
+#plt.style.use('seaborn-bright')
+#rc('font',**{'family':'serif','serif':['Computer Modern Roman']})
+#rc('text', usetex=True)
 
 
 # %% external software
-_path = '/home/simone/.mallet/mallet-2.0.8/bin/mallet'
+mallet_path = '/home/simone/.mallet/mallet-2.0.8/bin/mallet'
 
 
 # %% load data
 
-# collection in Mongo
-# --+ open pipeline
-client = MongoClient()
-# --+ pick-up db
-db = client.digitalTechs
-# --+ load the data
-df = pd.DataFrame(list(db.press_releases.find()))
+# document attributes
+'''
+assuming you want to use a local copy of the corpus, just read:
+/tutorials/_0/pr_wsj_ft.json
+'''
 
-# dictionary
+
+'''
+assuming the corpus of text is stored in a Mongo DB
+'''
+## --+ open pipeline
+#client = MongoClient()
+## --+ pick-up db
+#db = client.digitalTechs
+## --+ load the data
+#df = pd.DataFrame(list(db.press_releases.find()))
+
+# dictionary (saved in tutorial _0)
 in_f = os.path.join('transformation', '.data', 'pr_dictionary.dict')
 dictionary = Dictionary.load(in_f)
 
-# corpus
+# corpus (saved in tutorial _0)
 in_f = os.path.join('transformation', '.data', 'pr_corpus.mm')
 corpus = MmCorpus(in_f)
 
-# docs phrased
+# docs phrased (saved in tutorial _0)
 in_f= os.path.join('transformation', '.data', 'pr_docs_phrased.pickle')
 with open(in_f, 'rb') as pipe:
     docs_phrased = pickle.load(pipe)
 
-# time slices to pass to the sequential lda
-in_f = os.path.join('transformation', '.data', 'pr_time_slices.txt')
-time_slices = []
-with open(in_f, 'rb') as pipe:
-    for line in pipe.readlines():
-        time_slices.append(int(line.strip()))
 
-
-# %% clean data read from Mongo
+# %% clean data with document attributes
 
 # basic cleaning
 # --+ get timespans
@@ -107,7 +113,7 @@ y0 = df.loc[(df['outlet'] == 'ft') &
 y1 = df.loc[(df['outlet'] == 'wsj') &
             (df['year'] >= 2013)].groupby('year').size().values
 # --+ labels
-x_labels = ['%s' % i for i in x if i < 2019] + ['2019*']
+x_labels = ['%s' % i for i in x]
 y_labels = ['%s' % i for i in np.arange(0, 1400, 200)]
 for i, s in enumerate(y_labels):
     if len(s) > 3:
@@ -179,11 +185,11 @@ def compute_coherence_values(_dictionary,
     coherence_values = []
     model_list = []
     for num_topics in range(_start, _limit, _step):
-        model = gensim.models.wrappers.Lda(mallet_path,
-                                                 corpus=_corpus,
-                                                 num_topics=num_topics,
-                                                 id2word=_dictionary,
-                                                 random_seed=_seed)
+        model = gensim.models.wrappers.Lda(mallet_path=_path,
+                                           corpus=_corpus,
+                                           num_topics=num_topics,
+                                           id2word=_dictionary,
+                                           random_seed=_seed)
         model_list.append(model)
         coherencemodel = CoherenceModel(model=model,
                                         texts=_texts,
@@ -290,7 +296,6 @@ plt.savefig(out_f,
             transparent=True,
             bbox_inches='tight',
             pad_inches=0)
-
 
 
 # %% topic model estimation
