@@ -40,11 +40,13 @@ Notes: the dataset contains 4,384 articles published in the Wall Street
 import os
 import logging
 import re
+import json
 # load data from mongodb
 from pymongo import MongoClient
 # data analysis/management/manipulation
 import numpy as np
 import pandas as pd
+from pandas import json_normalize
 # nlp pipeline
 import spacy
 import en_core_web_lg
@@ -77,7 +79,9 @@ os.chdir(wd)
 in my case, I'm reading data from a Mongo db. If you've got a local copy of
 dataset, just use Pandas.
 
-df = pd.read_json(pr_wsj_ft.json)
+json_data = [json.loads(line) for line in open('press_releases.json')] 
+
+df = pd.DataFrame(json_noralize(json_data)))
 
 Note: the 'uri' argument is mandatory to create a pipeline with a Mongo 
 server doesn't run on the machine you're sing to run this Python script 
