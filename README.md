@@ -1,7 +1,7 @@
 SMM694 ― Applied NLP
 =====================
 
-:Instructor
+Instructor
 ==========
 
 **Name:** Dr. Simone Santoni, Lecturer in Strategy
