@@ -19,7 +19,6 @@ Below are the materials at the center of week 1
 + Python scripts/Jupyter notebooks used in the webinar:
   - [`wb_6.ipynb`](week5/wb_5.ipynb): Jupyter notebook used for the application 
 
-
 Assignments
 ===========
 
