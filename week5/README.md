@@ -24,8 +24,4 @@ Below are the materials at the center of week 1
 Assignments
 ===========
 
-
-
-  [1]: 
-
- 
++ ps_5 is due by June 23 (8:00 PM) 
