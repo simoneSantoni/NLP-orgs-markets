@@ -6,7 +6,7 @@ Week 5 ― README
 * [Materials](#materials)
 * [Assignments](#assignments)
 
-<!-- vim-markdown-toc -->
+<!-- vim-markdown-toc GFM -->
 
 Materials
 =========
