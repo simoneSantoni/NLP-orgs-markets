@@ -45,10 +45,9 @@ with what consequences for the economic-financial performance of companies?
 with economic and financial performance in the post Brexit Referendum period?
 Then, why?
 
-<center> **!!!  Notes ¡¡¡** </center>
 
-<center> the above-displayed questions are just sample questions. Students are
-free to pick-up a different one. </center>
+**!!!  Notes ¡¡¡** The above-displayed questions are just sample questions. Students are
+free to pick-up a different one.
 
 Concerning the data preparation/transformation/analysis workflow, students may
 want to consider the possible pathways:
