@@ -165,9 +165,9 @@ Deliverables
 Students are free to pick-up the template the best serves their needs. I'll
 accept:
 
-+ reports (.docx, .md, or .pdf, preferably generated via LaTex)
++ report (.docx, .md, or .pdf, preferably generated via LaTex)
 + beamer (.pptx, .md, or .pdf)
-+ reports + beamer
++ report + beamer
 
 Just keep in mind 'organization & clarity of submitted materials' is an
 assessment dimension (see the [module outline](https://github.com/simoneSantoni/applied-NLP-smm694#learning-objectives-and-assessment)).
