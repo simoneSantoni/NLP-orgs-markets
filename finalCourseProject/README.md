@@ -62,6 +62,9 @@ context of some statistical or ML analysis
 and times -> use frequencies as features in the context of some statistical 
 analysis of ML analysis.
 
+**!!!  Notes ¡¡¡** The above-displayed questions are just sample work-flows. 
+Students are free to pick-up a different one.
+
 Tip to model the economic-financial performance of UK companies relative to 
 German and French companies: use the so-called Difference-in-Differences (DiD)
 design (see Sieweke & Santoni, 2020, page: ). Here's the intuition of the DiD:
@@ -139,10 +142,12 @@ country/stock market.
 
 ### Economic & financials
 
-There are two files containing economic & financials:
+There are two files containing economic & financials (variables' names are 
+self-explanatory):
 
-+ `financials__long_term`: 
-+ `financials__short_term`: 
++ `financials__long_term`: monthly data-points spanning the years 2014 - 2018
++ `financials__short_term`: daily data-points in the vicinity of the Brexit
+Referendum. 
 
 ### Annual reports
 
@@ -151,10 +156,21 @@ the portal of City's Library). Note: reports are not available in certain years
 ― mainly, this is due to M&As/restructuring that change the legal entity
 behind a company.
 
+The corpus of annual reports contain the following data tables:
+
++ `ar__attr,csv`: attributes of individual reports
++ `ar__docs.csv`: text corpus of the reports
+
 
 Deliverables
 ============
 
-Possible ways to deliver the projects ()
+Students are free to pick-up the template the best serves their needs. I'll
+accept:
 
++ reports (.docx, .md, or .pdf, preferably generated via LaTex)
++ beamer (.pptx, .md, or .pdf)
++ reports + beamer
 
+Just keep in mind 'organization & clarity of submitted materials' is an
+assessment dimension (see the module outline).
