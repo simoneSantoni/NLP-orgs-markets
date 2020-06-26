@@ -5,12 +5,9 @@ Table of Contents
 =================
 
 <!-- vim-markdown-toc GFM -->
-
-:
 * [Scope](#scope)
 * [Data](#data)
 * [Deliverables](#deliverables)
-
 <!-- vim-markdown-toc GFM -->
 
 Scope
