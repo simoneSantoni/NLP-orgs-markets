@@ -155,7 +155,7 @@ behind a company.
 
 The corpus of annual reports contain the following data tables:
 
-+ `ar__attr,csv`: attributes of individual reports
++ `ar__attr.csv`: attributes of individual reports
 + `ar__docs.csv`: text corpus of the reports
 
 
@@ -170,4 +170,4 @@ accept:
 + reports + beamer
 
 Just keep in mind 'organization & clarity of submitted materials' is an
-assessment dimension (see the module outline).
+assessment dimension (see the [module outline](https://github.com/simoneSantoni/applied-NLP-smm694#learning-objectives-and-assessment)).
