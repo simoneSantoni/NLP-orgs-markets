@@ -19,7 +19,7 @@ Below are the materials at the center of week 1
   - journal articles:
       * [Latent Dirichlet Allocation][1]
       * [Dynamic Topic Models][2]
-      * [Tooic Modeling in Management Research][3]
+      * [Topic Modeling in Management Research][3]
       * [Reading Tea Leaves][4]
 + videos (shared via MS Teams):
   - topic modeling: `v_4`

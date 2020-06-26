@@ -1,2 +1,0 @@
-Final Term Project - README
-============================
