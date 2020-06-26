@@ -2,6 +2,8 @@ Final Course Project - README
 =============================
 
 <!-- vim-markdown-toc GFM -->
+
+TOC
 :
 * [Scope](#scope)
 * [Data](#data)
@@ -41,8 +43,11 @@ with what consequences for the economic-financial performance of companies?
 with economic and financial performance in the post Brexit Referendum period?
 Then, why?
 
-**!!Notes¡¡*** the above-displayed questions are just sample questions. Students are
+<center> **!!!  Notes ¡¡¡** 
+
+the above-displayed questions are just sample questions. Students are
 free to pick-up a different one.
+</center>
 
 Concerning the data preparation/transformation/analysis workflow, students may
 want to consider the possible pathways:
