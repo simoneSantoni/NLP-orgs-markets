@@ -165,8 +165,8 @@ Deliverables
 Students are free to pick-up the template the best serves their needs. I'll
 accept:
 
-+ report (.docx, .md, or .pdf, preferably generated via LaTex)
-+ beamer (.pptx, .md, or .pdf)
++ report (.docx, .md, or .pdf generated via LaTeX)
++ beamer (.pptx, .md, or .pdf generated via LaTeX)
 + report + beamer
 
 Just keep in mind 'organization & clarity of submitted materials' is an
