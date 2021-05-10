@@ -1,9 +1,0 @@
-gensim
-networkx
-numpy
-nltk
-#pyldavis
-pytorch
-scikit-learn
-spacy
-#stanza
