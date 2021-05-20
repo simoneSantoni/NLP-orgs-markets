@@ -120,7 +120,7 @@ your own). Specifically, there are two types of coursework, namely two
 'hackathons' (HK), and a 'final course project' (FCP), which
 contribute to the final mark (FM) as follows:
 
-FM = 0.15 X 2 X HK + 0.80 X FCP
+FM = 0.15 X 2 X HK + 0.70 X FCP
 
 The two **HKs** ― to take place in weeks 4 and 6 ― fall in the category
 of 'purpose-driven' hackathons and will last five days each. The topics
