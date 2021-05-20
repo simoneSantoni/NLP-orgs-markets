@@ -52,16 +52,3 @@ Below are the materials at the center of week 1
       * [statistical analysis of word vectors and embeddings](https://arxiv.org/pdf/1902.00496.pdf)
       * [example of 'nuanced' sentiment analysis](http://tinyurl.com/y722xzjg)
       * [example of information extraction paper](https://www.sciencedirect.com/science/article/pii/s187705091932071x)
-+ videos (shared via MS Teams):
-  - organization of the module: `v_0`
-  - a Python environment for NLP: `v_1`
-+ Python scripts/Jupyter notebooks used in the webinar:
-  - `wb_1.md`: key concepts and tools for text manipulation
-  - `wb_1.py`: Python script used for the application on regex and text normalization
-
-
-Assignments
-===========
-
-+ no problem set is due
-+ `ps_1`: problem set due by May 26 (8:00 PM). Non mandatory. Send your solution to simone.santoni.1@city.ac.uk
