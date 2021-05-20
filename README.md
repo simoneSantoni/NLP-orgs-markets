@@ -157,16 +157,13 @@ to **minor changes**.
 
 Each block of the program has both theory and applications. I will cover
 the *theory part* in a series of Coursera-alike video-recordings. The
-main focus will be the Jupyter slideshow; on the top-right corner of
-the screen you will see my
-[Mini-Me](https://en.wikipedia.org/wiki/Mini-Me) hand-waving for circa
-one hour. I will release the video-recordings on a weekly basis ―
-i.e., every Sunday at 11:30 PM London Time.
+main focus will be the Jupyter slideshow. I will release the video-recordings 
+on a weekly basis ― i.e., every Sunday at 11:30 PM London Time.
 
-Every Wednesday at 12:00 London time, there will be an interactive Zoom
+Every Thu at 9:00 London time, there will be an interactive Zoom
 webinar of one hour and a half. The first section of the webinar is a
 Q&A session in which I will address students' questions about the topics
-covered in the video-recordings (yup, you have circa 2.5 days to digest
+covered in the video-recordings (yup, you have circa 3 days to digest
 the video-recordings + related readings). **Note:** students are invited
 to share their clarification questions via email the day before the
 webinar (by 8:00 PM London time). In the second part of the webinar, I
