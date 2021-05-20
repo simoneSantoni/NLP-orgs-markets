@@ -22,25 +22,20 @@ In Week 1, the attention revolves around:
 
 | Week (date)     | Agenda                                                                 |
 |-----------------|------------------------------------------------------------------------|
-| **1 (20-05)**   | **Introduction to SMM694**                                             |
-|                 | ― organization of the module                                           |
-|                 | **Overview of NLP**                                                    |
-|                 | ― conceptual and methodological roots                                  |
-|                 | ― scope of application                                                 |
-|                 | ― established tools                                                    |
-|                 | ― hot topics                                                           |
-|                 | **A Python environment for NLP**                                       |
-|                 | ― NLP pipelines (spaCy)                                                |
-|                 | ― NLP analysis packages (Gensim, Stanza)                               |
-|                 | ― NLP with Deep Learning (PyTorch)                                     |
-|                 | ― technical and scientific computation (NumPy)                         |
-|                 | ― ML (scikit-learn)                                                    |
-|                 | **Webinar**                                                            |
-|                 | ― Q&A session                                                          |
-|                 | ― regular expressions                                                  |
-|                 | ― words and text corpora                                               |
-|                 | ― text normalization                                                   |
-|                 | ― minimum edit distance                                                |
+| **1 (20-05)** | **Introduction to SMM694**                                |
+|               | ― organization of the module                              |
+|               | **Overview of NLP**                                       |
+|               | ― conceptual and methodological roots                     |
+|               | ― scope of application                                    |
+|               | ― established tools                                       |
+|               | ― hot topics                                              |
+|               | **A Python environment for NLP**                          |
+|               | ― NLP pipelines (spaCy)                                   |
+|               | ― General purpose NLP packages (Gensim, NLTK)             |
+|               | ― Topic modeling (Tomotopy)                               |
+|               | ― NLP with Deep Learning (PyTorch)                        |
+|               | ― technical and scientific computation (NumPy)            |
+|               | ― ML (scikit-learn)                                       |
 
 
 Materials
