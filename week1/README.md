@@ -1,17 +1,9 @@
-Week 1 ― README
-===============
+# Week 1
 
-<!-- vim-markdown-toc GFM -->
-
-* [Overview](#overview)
-* [Materials](#materials)
-* [Assignments](#assignments)
-
-<!-- vim-markdown-toc -->
-
-
-Overview
-========
+- [Week 1](#week-1)
+  - [Overview](#overview)
+  - [Materials](#materials)
+## Overview
 
 In Week 1, the attention revolves around:
 
@@ -20,26 +12,25 @@ In Week 1, the attention revolves around:
 + the libraries that will be leveraged all throughout the module
 
 
-| Week (date)     | Agenda                                                                 |
-|-----------------|------------------------------------------------------------------------|
-| **1 (20-05)** | **Introduction to SMM694**                                |
-|               | ― organization of the module                              |
-|               | **Overview of NLP**                                       |
-|               | ― conceptual and methodological roots                     |
-|               | ― scope of application                                    |
-|               | ― established tools                                       |
-|               | ― hot topics                                              |
-|               | **A Python environment for NLP**                          |
-|               | ― NLP pipelines (spaCy)                                   |
-|               | ― General purpose NLP packages (Gensim, NLTK)             |
-|               | ― Topic modeling (Tomotopy)                               |
-|               | ― NLP with Deep Learning (PyTorch)                        |
-|               | ― technical and scientific computation (NumPy)            |
-|               | ― ML (scikit-learn)                                       |
+| Week (date)   | Agenda                                         |
+| ------------- | ---------------------------------------------- |
+| **1 (20-05)** | **Introduction to SMM694**                     |
+|               | ― organization of the module                   |
+|               | **Overview of NLP**                            |
+|               | ― conceptual and methodological roots          |
+|               | ― scope of application                         |
+|               | ― established tools                            |
+|               | ― hot topics                                   |
+|               | **A Python environment for NLP**               |
+|               | ― NLP pipelines (spaCy)                        |
+|               | ― General purpose NLP packages (Gensim, NLTK)  |
+|               | ― Topic modeling (Tomotopy)                    |
+|               | ― NLP with Deep Learning (PyTorch)             |
+|               | ― technical and scientific computation (NumPy) |
+|               | ― ML (scikit-learn)                            |
 
 
-Materials
-=========
+## Materials
 
 Below are the materials at the center of week 1
 
