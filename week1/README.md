@@ -1,4 +1,4 @@
-# Week 1
+# Week 1 － Introduction to SMM694
 
 - [Week 1](#week-1)
   - [Overview](#overview)
