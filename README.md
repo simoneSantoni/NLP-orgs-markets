@@ -8,6 +8,7 @@
   - [Learning Objectives and Assessment](#learning-objectives-and-assessment)
   - [Organization of the Module](#organization-of-the-module)
   - [Software Requirements](#software-requirements)
+
 ## Instructor
 
 **Name:** Dr. Simone Santoni, Lecturer in Strategy
@@ -158,7 +159,7 @@ to **minor changes**.
 Each block of the program has both theory and applications. I will cover
 the *theory part* in a series of Coursera-alike video-recordings. The
 main focus will be the Jupyter slideshow. I will release the video-recordings 
-on a weekly basis ― i.e., every Sunday at 11:30 PM London Time.
+on a weekly basis ― i.e., every Monday at 11:30 PM London Time.
 
 Every Thu at 9:00 London time, there will be an interactive Zoom
 webinar of one hour and a half. The first section of the webinar is a
