@@ -194,21 +194,13 @@ along with companion materials.
 |               | ― words and meanings in linguistics                       |
 |               | ― words and meanings in machines                          |
 |               | ― from WordNet to word2vec (via word vectors)             |
-|               | **Language modeling**                                     |
-|               | ― pre-DL: N-gram modeling                                 |
-|               | ― post-DL: neural nets and neural language models         |
-|               | ― part-of-speech tagging                                  |
-|               | ― parsing                                                 |
-|               | ― named entity recognition                                |
-|               | ― vectors                                                 |
 |               | **Webinar**                                               |
 |               | ― Q&A session                                             |
 |               | ― problem set discussion                                  |
 |               | ― using WordNet with NLTK                                 |
-|               | ― loading a pre-trained model of language (spaCy, Stanza) |
-|               | ― processing text through NLP pipelines (spaCy, Stanza)   |
+|               | ― loading a pre-trained model of language (spaCy)         |
+|               | ― processing text through NLP pipelines (spaCy)           |
 |               | ― leveraging word vectors (NumPy)                         |
-|               | ― problem set discussion                                  |
 | **3 (03-06)** | **Vector semantics and embeddings**                       |
 |               | ― word2vec                                                |
 |               | ― visualizing embeddings                                  |
