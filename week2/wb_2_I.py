@@ -9,7 +9,6 @@ Author     : Simone Santoni, simone.santoni.1@city.ac.uk
 
 Credits to : Bird, Klein & Loper (2009). Natural Language Processing with
              Python
-            
 
 Synopsis   : the script covers the following points:
 
@@ -27,13 +26,13 @@ from nltk.corpus import wordnet as wn
 
 # %% - A - discovering synsets
 # get the synsets for a focal word
-wn.synset('motorcar')
+wn.synset('motorcar.n.01')
 # get the lemmas included in a certain synset
-wn.synset('car.n.01').lemma_names
+wn.synset('car.n.01').lemma_names()
 # get the definition for the synset 
-wn.synset('car.n.01').definition
+wn.synset('car.n.01').definition()
 # example referring to the sysnet
-wn.synset('car.n.01').examples
+wn.synset('car.n.01').examples()
 """
 Although definitions help humans to understand the intended meaning of a synset,
 the words of the synset are often more useful for our programs. To eliminate
@@ -43,9 +42,9 @@ lemma. We can get all the lemmas for a given synset , look up a particular lemma
 , get the synset corresponding to a lemma , and get the “name” of a lemma
 """
 # get the lemmas for synset 'car.n.01'
-wn.synset('car.n.01').lemmas
+wn.synset('car.n.01').lemmas()
 # get the lemma for an item in the synset of interest
-wn.lemma('car.n.01.automobile').synset
+wn.lemma('car.n.01.automobile').synset()
 # get the word associated with the lemma for the item of interest
 wn.lemma('car.n.01.automobile').name
 """
@@ -56,7 +55,7 @@ syn- set, the word car is ambiguous, having five synsets
 wn.synsets('car')
 # get the lemmas'name for each sysnset
 for synset in wn.synsets('car'):
-    print synset.lemma_names
+    print(synset.lemma_names)
 
 # %% - B - navigating the abstract-2-concrete continuum  
 """
@@ -71,7 +70,7 @@ types_of_motorcar = motorcar.hyponyms()
 # slice types
 types_of_motorcar[26]
 # print all words in the 'lower-level' synset
-sorted([lemma.name for synset in types_of_motorcar for lemma in synset.lemmas])
+sorted([lemma.name() for synset in types_of_motorcar for lemma in synset.lemmas()])
 """
 We can also navigate up the hierarchy by visiting hypernyms. Some words have
 multiple paths, because they can be classified in more than one way.

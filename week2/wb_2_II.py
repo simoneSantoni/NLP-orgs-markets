@@ -2,14 +2,10 @@
 #-*-encoding utf-8 -*-
 """
 ------------------------------------------------------------------------------
-    wb_2_I.py    |    Python script for session 2 webinar, part II
+    wb_2_II.py    |    processing textual data via NLP, part II
 ------------------------------------------------------------------------------
 
 Author     : Simone Santoni, simone.santoni.1@city.ac.uk 
-
-Credits to : Bird, Klein & Loper (2009). Natural Language Processing with
-             Python
-            
 
 Synopsis   : the script covers the following points:
 
@@ -62,7 +58,7 @@ for token in doc[0:10]:
 #   by retaining lemmas instead of words
 lemmas = [token.lemma_ for token in doc[0:10]]
 
-# %% - C - manipulating data with NumPy/Scipy
+# %% - C - get vectors to manipulate with NumPy/Scipy
 for token in doc[0:2]:
     print(token.text, token.has_vector, token.vector_norm, token.is_oov, token.vector)
 
