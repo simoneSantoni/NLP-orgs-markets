@@ -2,7 +2,7 @@
 
 Here's the problem set due on May 26 (5:00 PM):
 
-watch the video: https://www.youtube.com/watch?v=bh9wM846bMA based on the
+Watch the video: https://www.youtube.com/watch?v=bh9wM846bMA based on the
 insights emerging from the video, describe an NLP project that you'd like to
 carry out using the Reddit corpus (the scope of the project should be relevant
 from a business/economic/organizational perspective) There are no particular
