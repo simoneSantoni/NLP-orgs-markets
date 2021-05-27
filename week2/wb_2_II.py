@@ -2,7 +2,7 @@
 #-*-encoding utf-8 -*-
 """
 ------------------------------------------------------------------------------
-    wb_2_I.py    |    Python script for session 2 webinar, part I
+    wb_2_I.py    |    Python script for session 2 webinar, part II
 ------------------------------------------------------------------------------
 
 Author     : Simone Santoni, simone.santoni.1@city.ac.uk 
@@ -65,3 +65,5 @@ lemmas = [token.lemma_ for token in doc[0:10]]
 # %% - C - manipulating data with NumPy/Scipy
 for token in doc[0:2]:
     print(token.text, token.has_vector, token.vector_norm, token.is_oov, token.vector)
+
+# %%
