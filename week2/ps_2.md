@@ -12,7 +12,7 @@ following tasks:
 - produce the vocabulary of unique words
 - plot the frequency distribution of unique words in the aggregated corpus 
   of text (that is, the concatenation of the twelve transcripts)
-- use the vocabulary of words represented in the aggregate corpus
+- use the vocabulary of words included in the aggregate corpus
   to represent each transcript as a bag of words
 - use the distance metric of your choice (e.g., cosine similarity) 
   to assess the semantic similarity between pairs of documents. Tip:
