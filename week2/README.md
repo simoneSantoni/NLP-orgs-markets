@@ -29,9 +29,9 @@ In Week 2, we'll pursue three goals:
 
 ## Materials
 
-Below are the materials at the center of week 1
+Below are the materials at the center of week 2:
 
-+ readings: 
+- readings: 
   - lecture notes: `ln_2_*.ipynb`
   - textbook: sections 6.1 - 6.7 (included) included in Jurafksi and Martin's book,
     [chapter 6](https://web.stanford.edu/~jurafsky/slp3/6.pdf). 
