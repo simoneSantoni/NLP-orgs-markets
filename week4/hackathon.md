@@ -70,6 +70,14 @@ df = pd.read_csv("../data/leadershipEffectiveness/prolific_data.csv")
 
 ## Your task (Step 3)
 
-Use the statistical or ML framework of your choice to reveal the semantic features 
-that are more closely associated with or best predict leadership effectiveness.
-Admitted languages for the statistical or ML analysis: Julia, Python, R, Rust, or Stata.
+Use the statistical or ML framework of your choice to reveal the semantic
+features that are more closely associated with or best predict leadership
+effectiveness.  Admitted languages for the statistical or ML analysis: Julia,
+Python, R, Rust, or Stata.
+
+## Deliverables and deadline
+
+By June 9 (5:00 PM) submit the code for your project and a 5-frame slideshow
+illustrating: i) the process for your analysis; ii) the main result you achieve, 
+i.e., the extent to which you can explain of predict leadership effectiveness
+using word embeddings.
