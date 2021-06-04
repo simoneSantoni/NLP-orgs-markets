@@ -6,7 +6,7 @@ Consider the ['commencement speech corpus'](/Users/simone/githubRepos/applied-NL
 which contains the transcripts for twelve speeches given by public 
 leaders at North-American universities.
 
-Use pure spaCy and NumPy and/or SciPy and/or Pandas to carry out the
+Use spaCy and NumPy and/or SciPy and/or Pandas to carry out the
 following tasks:
 
 - pass the documents through the spaCy NLP pipeline (preferrably, use 
