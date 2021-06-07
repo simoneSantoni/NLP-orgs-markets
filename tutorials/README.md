@@ -7,10 +7,12 @@ ideas discussed in the online videos/tutorials. The large majority of tutorials
 also offer some basic NLP recipes that may be useful for future projects.
 (I'll continue to update this as the module progresses; keep an eye on it.)
 
-| File name | Tags                                                     | Data                  | Libraries     |
-| --------- | -------------------------------------------------------- | --------------------- | ------------- |
-| _0        | NLP pipeline, dictionary creation, corpus transformation | Econ newspaper corpus | spaCy, Gensim |
-
+| File name | Tags                                                     | Data                  | Libraries                   |
+| --------- | -------------------------------------------------------- | --------------------- | --------------------------- |
+| _0        | NLP pipeline, dictionary creation, corpus transformation | Econ newspaper corpus | spaCy, Gensim               |
+| _1        | word embeddings, manipulation of embedding features      | Google News corpus    | spaCy, NumPy/SciPy          |
+| _2        | word embeddings, browsing word embeddings                | Google News corpus    | spaCy, Gensim, Scikit-Learn |
+| _3        | word embeddings, visualizing embeddings                  |                       | spaCy, whatlies             |
 ## Learning goals of the individual tutorials
 
 The following sections provide a concise description of each tutorial's learning
@@ -28,18 +30,24 @@ collection of documents
 
 Learning goals:
 
-1. expanding on the features included in word embeddings
-2. assigning a specific role to technical and scientific computation libraries
-   in the context of NLP
-3. calculating similarity metrics with SciPy 
+1. loading word vectors from trained embeddings
+2. browsing word embeddings to sample clusters of words that are semantically
+   similar
+3. visualizing clusters of words that are semantically similar
+4. calculating the distance between any two vectors (that is, their
+   semantic (dis-)similarity)
 
 ### Tutorial `2` ― browsing word embeddings
 
 Learning goals:
 
-1. browsing word embeddings to sample clusters of words that are semantically
-   similar
-2. visualizing clusters of words that are semantically similar
+1. loading word vectors from a pre-trained model
+2. fetching the word vectors associated with target entities
+3. sampling 'alter' words, i.e., words that are in the neighborhood
+   of a target vector
+4. fetching the word vectors associated with alter words
+5. using dimensionality reduction techniques to explore the semantic
+   similarity across target and alter words
 
 ### Tutorial `3` ― visual exploration of word embeddings' features
 
@@ -62,4 +70,3 @@ Learning goals:
 1. using word embeddings as features in a regression framework
 2. picking-up the most suited regression framework to exploit the predictive
    value of word embeddings
-
