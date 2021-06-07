@@ -7,7 +7,7 @@
 
 Author   : Simone Santoni, simone.santoni.1@city.ac.uk
 
-Synopsis : This tutorial illustrates how:
+Synopsis : This tutorial pursues the following learning goals:
    
            1. charting the semantic relations involving sets of lexical items
            2. familiarizing with 'whatlies,' a dedicated libraries for the 
