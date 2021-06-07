@@ -12,7 +12,9 @@ also offer some basic NLP recipes that may be useful for future projects.
 | _0        | NLP pipeline, dictionary creation, corpus transformation | Econ newspaper corpus | spaCy, Gensim               |
 | _1        | word embeddings, manipulation of embedding features      | Google News corpus    | spaCy, NumPy/SciPy          |
 | _2        | word embeddings, browsing word embeddings                | Google News corpus    | spaCy, Gensim, Scikit-Learn |
-| _3        | word embeddings, visualizing embeddings                  |                       | spaCy, whatlies             |
+| _3        | word embeddings, visualizing embeddings                  | Google News corpus    | spaCy, whatlies             |
+| _4        | word embeddings, algebric operations                     | None                  | spaCy                       |
+
 ## Learning goals of the individual tutorials
 
 The following sections provide a concise description of each tutorial's learning
@@ -70,3 +72,5 @@ Learning goals:
 1. using word embeddings as features in a regression framework
 2. picking-up the most suited regression framework to exploit the predictive
    value of word embeddings
+
+__!! To be released after hackathon # 1 !!__
