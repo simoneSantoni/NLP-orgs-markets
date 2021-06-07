@@ -35,7 +35,7 @@ That's easy to accomplish － for example, you may want to use Gensim:
 ```{python}
 import gensim.downloader as api
 model = api.load("word2vec-google-news-300")
-word_vectors = model.wv
+word_vectors = model[""]
 ```
 
 ### Step 2: Load the leadership effectiveness scores
