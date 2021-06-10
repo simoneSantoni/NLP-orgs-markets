@@ -1,7 +1,8 @@
 # Week 4 ― README
 
-Under construction
-
+- [Week 4 ― README](#week-4--readme)
+  - [Overview](#overview)
+  - [Materials](#materials)
 ## Overview
 
 In week 4, the attention revolves around topic modeling, a popular technique to
