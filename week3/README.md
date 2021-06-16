@@ -6,7 +6,7 @@
 
 ## Overview
 
-In week 3, we'll pursue there learning goals:
+In week 3, we'll pursue three learning goals:
 
 - Appreciating the anatomy of word2vec
 - Assigning a role to new forms of embeddings
