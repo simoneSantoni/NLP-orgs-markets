@@ -17,8 +17,9 @@ To do    : None
 
 # %% load libraries
 import os
+import bz2
 import pickle
-from pymongo import MongoClient
+import _pickle as cPickle
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import rc
@@ -32,6 +33,13 @@ from gensim.similarities import MatrixSimilarity
 # %% working dir
 os.chdir("../data/econNewspaper")
 
+# %% utility functions
+# load any compressed pickle file
+def decompress_pickle(file):
+    data = bz2.BZ2File(file, 'rb')
+    data = pickle.load(data)
+    return data
+
 # %% viz options
 plt.style.use("seaborn-bright")
 rc("font", **{"family": "serif", "serif": ["Computer Modern Roman"]})
@@ -41,30 +49,23 @@ rc("text", usetex=True)
 mallet_path = "/home/simone/.mallet/mallet-2.0.8/bin/mallet"
 
 # %% load data
-
-# collection in Mongo
-# --+ open pipeline
-client = MongoClient()
-# --+ pick-up db
-db = client.digitalTechs
-# --+ load the data
-df = pd.DataFrame(list(db.press_releases.find()))
-
+# load corpus
+df = pd.read_csv("ft_wsj.csv")
 # load an existing dictionary for the corpus
 in_f = os.path.join("pr_dictionary.dict")
 dictionary = Dictionary.load(in_f)
-
 # load an existing representation for the corpus
-in_f = os.path.join("pr_corpus.mm")
+in_f = "pr_corpus.mm"
 corpus = MmCorpus(in_f)
-
 # load an existing transformation for the corpus that contains n-grams
-in_f = os.path.join("pr_docs_phrased.pickle")
-with open(in_f, "rb") as pipe:
+with open("pr_docs_phrased.pickle", "rb") as pipe:
     docs_phrased = pickle.load(pipe)
+    
+data = bz2.BZ2File(in_f, 'rb')
+data = pickle.load(in_f)
+docs_phrased = decompress_pickle(in_f)
 
 # %% clean data read from Mongo
-
 # basic cleaning
 # --+ get timespans
 df.loc[:, "year"] = df["date"].dt.year
@@ -78,7 +79,6 @@ df = df.loc[df["year"] >= 2009]
 df.drop(["_id"], axis=1, inplace=True)
 
 # %% exploratory data analysis
-
 # barchart of the distribution of articles over time
 # --+ data series
 x = np.arange(2013, 2020, 1)
@@ -137,7 +137,6 @@ out_f = os.path.join(
     "scripts", "analysis", "topicModeling", ".output", "articles_over_time.pdf"
 )
 plt.savefig(out_f, bbox_inches="tight", pad_inches=0)
-
 
 # %% topic modeling ― explore model validity
 
