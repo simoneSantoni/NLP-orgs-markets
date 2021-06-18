@@ -65,12 +65,30 @@ Learning goals:
 1. expanding on word embeddings to uncover complex semantic relations involving 
    lexical items
 
-### Tutorial `5` ― using word embeddings as features for ML models
+### Tutorial `5` ― string comparison via minimum edit distance
 
-Learning goals:
+This tutorial deals with the following topics:
 
-1. using word embeddings as features in a regression framework
-2. picking-up the most suited regression framework to exploit the predictive
-   value of word embeddings
++ string similarity
++ manipulation of word vectors
 
-__!! To be released after hackathon # 1 !!__
+The [jellyfish][1] library is **required** to reproduce the tutorial.
+
+The learning goal is to appreciate the approximate or phonetic distance between
+two string is a common task when it comes to manipulate strings. The jellyfish
+library for Python implements several distance metrics.
+
+One of the metrics available in the jellyfish library is the Levenshtein
+Distance / Minimum Edit Distance, the number of insertions, deletions, and
+substitutions required to change one word to another.
+
+One possible application is identifying successful patch/code submissions on the
+part of developers or data scientists working in a team setting (e.g., GitHub
+teams). For example, the members of the Linux Kernel community exchange their
+code using the mailing list of the project, while very few members have the
+power to accept (i.e., to commit) a patch/code submissions. This raises concerns
+on who contributed to what and to what extent.
+
+This script applies the Levensthein Distance/Minimum Edit Distance to appreciate
+the similarity between some code included in a fictional email and the commit
+that is visible in a fictional, reference repository.
