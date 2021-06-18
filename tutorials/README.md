@@ -15,7 +15,7 @@ also offer some basic NLP recipes that may be useful for future projects.
 | _3        | word embeddings, visualizing embeddings                  | Google News corpus    | spaCy, whatlies             |
 | _4        | word embeddings, algebric operations                     | None                  | spaCy                       |
 | _5        | minimum edit distance, string comparison                 | None                  | jellyfish                   |
-| _6        | topic modeling                                           | econNewspaper         | Gensim, Mallet              |
+| _6        | topic modeling                                           | Econ newspaper corpus | Gensim, Mallet              |
 
 ## Learning goals of the individual tutorials
 
