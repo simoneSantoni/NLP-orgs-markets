@@ -14,6 +14,8 @@ also offer some basic NLP recipes that may be useful for future projects.
 | _2        | word embeddings, browsing word embeddings                | Google News corpus    | spaCy, Gensim, Scikit-Learn |
 | _3        | word embeddings, visualizing embeddings                  | Google News corpus    | spaCy, whatlies             |
 | _4        | word embeddings, algebric operations                     | None                  | spaCy                       |
+| _5        | minimum edit distance, string comparison                 | None                  | jellyfish                   |
+| _6        | topic modeling                                           | econNewspaper         | Gensim, Mallet              |
 
 ## Learning goals of the individual tutorials
 
@@ -89,7 +91,7 @@ This script applies the Levensthein Distance/Minimum Edit Distance to appreciate
 the similarity between some code included in a fictional email and the commit
 that is visible in a fictional, reference repository.
 
-### Tutorial `6` – Hi there–
+### Tutorial `6` – topic modeling with Gensim and Mallet
 
 Learning goals:
 
