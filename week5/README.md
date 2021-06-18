@@ -39,4 +39,4 @@ Below are the materials at the center of week 5:
 - readings: 
   - lecture notes: `ln_5_*.ipynb`
   - journal articles:
-  - webinar: `wb_5_ipynb`
+  - webinar: `wb_5_*_ipynb`
