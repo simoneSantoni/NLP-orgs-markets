@@ -7,15 +7,16 @@ ideas discussed in the online videos/tutorials. The large majority of tutorials
 also offer some basic NLP recipes that may be useful for future projects.
 (I'll continue to update this as the module progresses; keep an eye on it.)
 
-| File name | Tags                                                     | Data                  | Libraries                   |
-| --------- | -------------------------------------------------------- | --------------------- | --------------------------- |
-| _0        | NLP pipeline, dictionary creation, corpus transformation | Econ newspaper corpus | spaCy, Gensim               |
-| _1        | word embeddings, manipulation of embedding features      | Google News corpus    | spaCy, NumPy/SciPy          |
-| _2        | word embeddings, browsing word embeddings                | Google News corpus    | spaCy, Gensim, Scikit-Learn |
-| _3        | word embeddings, visualizing embeddings                  | Google News corpus    | spaCy, whatlies             |
-| _4        | word embeddings, algebric operations                     | None                  | spaCy                       |
-| _5        | minimum edit distance, string comparison                 | None                  | jellyfish                   |
-| _6        | topic modeling                                           | Econ newspaper corpus | Gensim, Mallet              |
+| File name | Tags                                                     | Data                     | Libraries                   |
+| --------- | -------------------------------------------------------- | ------------------------ | --------------------------- |
+| _0        | NLP pipeline, dictionary creation, corpus transformation | Econ newspaper corpus    | spaCy, Gensim               |
+| _1        | word embeddings, manipulation of embedding features      | Google News corpus       | spaCy, NumPy/SciPy          |
+| _2        | word embeddings, browsing word embeddings                | Google News corpus       | spaCy, Gensim, Scikit-Learn |
+| _3        | word embeddings, visualizing embeddings                  | Google News corpus       | spaCy, whatlies             |
+| _4        | word embeddings, algebric operations                     | None                     | spaCy                       |
+| _5        | minimum edit distance, string comparison                 | None                     | jellyfish                   |
+| _6        | topic modeling                                           | Econ newspaper corpus    | spaCy, Gensim, Mallet       |
+| _7        | topic modeling                                           | Tripadvisor hotel review | spaCy, tomotopy             |
 
 ## Learning goals of the individual tutorials
 
@@ -108,3 +109,9 @@ organizational tradeoffs vs. media narratives”. 2021](https://github.com/simon
 
 ### Tutorial `7` – topic modeling with Tomotopy
 
+Learning goals:
+
+1. Estimating an LDA model with Tomotopy
+2. Integrating a spaCy pipeline with Tomotopy estimation capabilities
+
+This tutorial uses a sample of 20+ reviews from Tripadvisor.
