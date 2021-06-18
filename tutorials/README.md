@@ -67,16 +67,12 @@ Learning goals:
 
 ### Tutorial `5` ― string comparison via minimum edit distance
 
-This tutorial deals with the following topics:
+Learning goals:
 
-+ string similarity
-+ manipulation of word vectors
-
-The [jellyfish][1] library is **required** to reproduce the tutorial.
-
-The learning goal is to appreciate the approximate or phonetic distance between
-two string is a common task when it comes to manipulate strings. The jellyfish
-library for Python implements several distance metrics.
+1. appreciate the approximate or phonetic distance between
+two string is a common task when it comes to manipulate strings
+1. familiarizing with the jellyfish
+library for Python, which implements several distance metrics.
 
 One of the metrics available in the jellyfish library is the Levenshtein
 Distance / Minimum Edit Distance, the number of insertions, deletions, and
