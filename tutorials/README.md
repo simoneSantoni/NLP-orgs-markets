@@ -71,7 +71,7 @@ Learning goals:
 
 1. appreciate the approximate or phonetic distance between
 two string is a common task when it comes to manipulate strings
-1. familiarizing with the jellyfish
+2. familiarizing with the jellyfish
 library for Python, which implements several distance metrics.
 
 One of the metrics available in the jellyfish library is the Levenshtein
@@ -88,3 +88,18 @@ on who contributed to what and to what extent.
 This script applies the Levensthein Distance/Minimum Edit Distance to appreciate
 the similarity between some code included in a fictional email and the commit
 that is visible in a fictional, reference repository.
+
+### Tutorial `6` – Hi there–
+
+Learning goals:
+
+1. modeling a corpus of economic newspaper articles using Gensim & Mallet’s
+implementation of the Latent Dirichlet Allocation, the most popular algorithm in
+the area of Topic Modeling
+2. exploring and evaluating competing Topic Models (i.e., models retaining different 
+number of topics)
+
+The Python script included in the tutorial contains the code necessary to
+reproduce the analyses reported in the book chapter [Lanzolla, G., Santoni, S.,
+and Tucci, C.  “Unlocking value from AI in financial services: strategic and
+organizational tradeoffs vs. media narratives”. 2021]()
