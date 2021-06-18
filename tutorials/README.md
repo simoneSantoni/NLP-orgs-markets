@@ -102,4 +102,4 @@ number of topics)
 The Python script included in the tutorial contains the code necessary to
 reproduce the analyses reported in the book chapter [Lanzolla, G., Santoni, S.,
 and Tucci, C.  “Unlocking value from AI in financial services: strategic and
-organizational tradeoffs vs. media narratives”. 2021]()
+organizational tradeoffs vs. media narratives”. 2021](https://github.com/simoneSantoni/applied-NLP-smm694/blob/60ff0a0857e585f42f200fc1fb962911939be4da/data/econNewspaper/lanzolla_santoni_tucci.pdf)
