@@ -7,10 +7,9 @@
 As unicorns grow, people have started to contemplate the existence of
 the gig economy's dark side. Particularly, the public debate has 
 concentrated on the labor conditions of gig workers ― self-employed
-individuals whose behavior is, in fact, constrained by the 
+individuals whose behavior is constrained by the 
 algorithms behind the [business models operated by 
-prominent companies such as Airbnb, Deliveroo, or Uber]
-(https://www.businessmodelzoo.com/).
+prominent companies such as Airbnb, Deliveroo, or Uber](https://www.businessmodelzoo.com/).
 
 ## Problem 
 
@@ -45,6 +44,8 @@ Here are the steps students may want to go through:
     admitted
 - run a topic modeling to pursue goal #1
 - run a sentiment analysis to pursue goal #2
+   - regarding the sentiment analysis, students are free to 
+     consider the affective states they prefer 
 - carry out some statistical post-processing on the outcome of 
   the topic modeling and sentiment analysis to pursue goal #3
 
