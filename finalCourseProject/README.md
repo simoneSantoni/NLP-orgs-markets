@@ -39,7 +39,7 @@ Here are the steps students may want to go through:
   combinations) that you think is adequate o pursue goals 1-3
 - collect a sample of messages exchange in the community you
   want to focus on
-  - at least 500 hundred messages are required for the analysis
+  - at least 500 messages are required for the analysis
   - both hand-curated and automated data gathering procedures are 
     admitted
 - run a topic modeling to pursue goal #1
