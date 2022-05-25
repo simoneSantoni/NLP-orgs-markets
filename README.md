@@ -1,6 +1,6 @@
 # README
 
-![](images/bloomberg.png)
+![](images/papers.jpeg)
 
 This is a companion repo providing sample data and the Python scripts/notebooks
 regarding the various examples, problem sets, and case studies mentioned in the
