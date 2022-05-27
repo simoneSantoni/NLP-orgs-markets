@@ -21,7 +21,8 @@ import glob, os
 import json
 import numpy as np
 import nltk
-nltk.download('punkt') ## comment this if you have already downloaded 'punkt'
+
+nltk.download("punkt")  ## comment this if you have already downloaded 'punkt'
 from nltk.tokenize import word_tokenize
 from nltk.tokenize import wordpunct_tokenize
 from nltk.tokenize import sent_tokenize
@@ -45,17 +46,17 @@ for in_f in in_fs:
         # upate the container
         key = in_f.split("movieReviews/")[1].rstrip(".json")
         reviews[key] = text
-
-# %% Bare-bone tokenizer
 # let's tokenize a randomly drawn review
 # --+ reviews keys
 keys = list(reviews.keys())
 # --+ we randomly pick up a key
 pos = np.random.choice(len(keys))
 text = reviews[keys[pos]]["imdb_user_review"]
+
+# %% Bare-bone tokenizer
 # get tokens by splitting on spaces
 tkns_bb = text.split(" ")
-print(tokens)
+print(tkns_bb)
 
 # %% Tokenization with NLTK
 """
@@ -77,7 +78,9 @@ print(tkns_wp)
 # punkt-based tokenizer
 tkns_pu = word_tokenize(text)
 print(tkns_pu)
-
 # sentence tokenizer
-snt_tkns = sent_tokenize(text)
+snt_tkns = [[sentence] for sentence in sent_tokenize(text)]
 print(snt_tkns)
+
+# %% Tokenization with spaCy
+tkns_sp = [token.text for token in nlp(text)]
