@@ -17,10 +17,10 @@ Notes    : NaN
 """
 
 # %% Import libraries
+import pandas as pd
 import spacy
 
 # %% Load the model of the language to use for the pre-processing
-nlp = spacy.load("en_core_web_sm")
-
+nlp = spacy.load("en_core_web_lg")
 
 # %% Load the data
