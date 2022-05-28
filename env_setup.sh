@@ -12,7 +12,10 @@
 conda install ipython jupyter numpy scipy matplotlib pandas gensim nltk
 
 # community channel libraries
-conda install -c conda-forge scikit-learn spacy tomotopy python-flair textblob
+conda install -c conda-forge scikit-learn spacy python-flair textblob
 
 # pytorch has its own channel and comes with multiple packages 
 conda install pytorch torchvision torchaudio -c pytorch
+
+# libraries not available in Anaconda
+pip install tomotopy
