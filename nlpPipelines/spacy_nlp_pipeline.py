@@ -16,7 +16,7 @@ Notes    : NaN
 
 """
 
-# %% 
+# %%
 # Import libraries
 #
 import glob, os
@@ -27,7 +27,7 @@ from rich.table import Table
 # %% Load the model of the language to use for the pre-processing
 nlp = spacy.load("en_core_web_sm")
 
-# %% 
+# %%
 # Load the transcripts for a sample of commencement speeches
 #
 # browse target folder
@@ -41,15 +41,6 @@ for in_f in in_fs:
         speeches[key] = f.read()
         del key
 
-# %% 
-# Pre-process the data using the spaCy pipeline
-#
-# create a dictionary to store the pre-processed data
-# corpus = {}
-# for key in speeches.keys():
-#    doc = nlp(speeches[key])
-#    for item in doc:
-
 # %%
 # create a Rich's table to print the output of the spaCy's pipeline
 console = Console()
@@ -60,16 +51,23 @@ table = Table(
     title="[bold] [#2070b2] A pre-processing NLP pipeline with spaCy[/#2070b2]",
 )
 # add columns
-table.add_column('Token text')
-table.add_column('Lemma')
-table.add_column('POS')
-table.add_column('DEP')
-table.add_column('Alpha')
-table.add_column('Stop')
+table.add_column("Token text")
+table.add_column("Lemma")
+table.add_column("POS")
+table.add_column("DEP")
+table.add_column("Alpha")
+table.add_column("Stop")
 # let's consider the first speech in the dictionary
 doc = speeches[0]
 # we retrieve the tokens' attributes and we add them to the table
 for token in nlp(doc):
-    table.add_row(token.text, token.lemma_, token.pos_, token.dep_, str(token.is_alpha), str(token.is_stop))
+    table.add_row(
+        token.text,
+        token.lemma_,
+        token.pos_,
+        token.dep_,
+        str(token.is_alpha),
+        str(token.is_stop),
+    )
 # print the table
 console.print(table)
