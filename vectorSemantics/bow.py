@@ -17,9 +17,8 @@ Notes    : NaN
 
 # %%
 # load libraries
-from collections import Counter, OrderedDict
+from collections import Counter, OrderedDict, defaultdict
 from typing import Dict, List, Tuple
-from matplotlib import collections
 import numpy as np
 from nltk.tokenize import TreebankWordTokenizer
 import spacy
@@ -102,7 +101,7 @@ for doc in docs_tkns:
     vector = OrderedDict((token, 0) for token in voc)
     tkns_count = Counter(doc)
     for k, v in tkns_count.items():
-        vector[k] = v / len(voc)
+        vector[k] = v
     vector_space.append(vector)
     del vector
 
@@ -133,7 +132,7 @@ for doc in docs_tkns:
     vector = OrderedDict((token, 0) for token in voc)
     tkns_count = Counter(doc)
     for k, v in tkns_count.items():
-        vector[k] = v / len(voc)
+        vector[k] = v
     vector_space.append(vector)
 print(vector_space)
 
@@ -141,7 +140,7 @@ print(vector_space)
 # a BoW implementation that expands the vocabulary as new docs are processed
 
 # here's our function
-def text2bow(tkns_: List[str], voc_: Dict[str, int]) -> List[Tuple[int, int]]:
+def doc2bow(tkns_: List[str], voc_: Dict[str, int]) -> List[Tuple[int, int]]:
     """_summary_
 
 	Args:
@@ -151,7 +150,7 @@ def text2bow(tkns_: List[str], voc_: Dict[str, int]) -> List[Tuple[int, int]]:
 	Returns:
 	    _type_: _description_
 	"""
-    tkns_count = collections.defaultdict(int)
+    tkns_count = defaultdict(int)
     for tkn in tkns_:
         if tkn not in voc_:
             voc_[tkn] = len(voc_)
@@ -164,9 +163,9 @@ def text2bow(tkns_: List[str], voc_: Dict[str, int]) -> List[Tuple[int, int]]:
 # --+ an empty container for the BoW transformations
 voc = {}
 # --+ BoW representation for the first doc
-print(text2bow(TreebankWordTokenizer().tokenize(docs[0]), voc))
+print(doc2bow(TreebankWordTokenizer().tokenize(docs[0]), voc))
 # --+ BoW representation for the second doc
-print(text2bow(TreebankWordTokenizer().tokenize(docs[1]), voc))
+print(doc2bow(TreebankWordTokenizer().tokenize(docs[1]), voc))
 
 
 # %%

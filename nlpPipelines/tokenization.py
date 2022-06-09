@@ -8,9 +8,9 @@
 
 Author   : Simone Santoni, simone.santoni.1@city.ac.uk 
 
-Synopsys : The script implments a barebone tokenizer in pure Python. Sample 
-           data from IMDB are used to illustrate the functioning of the 
-	   tokenizer.
+Synopsys : The script implements a barebone tokenizer in pure Python alongside
+           and NLTK and a spaCy tokenizer. Sample data from IMDB are used to 
+           illustrate the functioning of the tokenizers.
 
 Notes    : NaN 
 
