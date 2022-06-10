@@ -182,5 +182,5 @@ for i, doc in enumerate(docs):
     # one hot encoded BoW
     corpus = pd.DataFrame({k: 1 for k in voc}, index=[i])
     # append data 
-    oh = pd.concat([oh, corpus], axis=1)
+    oh = pd.concat([oh, corpus], axis=0)
     oh.fillna(0, inplace=True)
