@@ -64,28 +64,6 @@ for player in players:
     except:
         pass
 
-
-# %%
-# let's retrieve the 10 closest vectors associated with each individual
-# target word (i.e., sport super-start)
-
-# empty containers
-embedding_clusters = []
-word_clusters = []
-# iterate over players
-for player in players:
-    # temporary lists
-    embeddings = []
-    words = []
-    for similar_word, _ in wv.most_similar(player, topn=10):
-        # retrieve words
-        words.append(similar_word)
-        # retrieve vectors
-        embeddings.append(wv[similar_word])
-    # append temporary lists
-    embedding_clusters.append(embeddings)
-    word_clusters.append(words)
-
 # %%
 # plotting the position of the three super-starts in the vector space
 
@@ -128,6 +106,27 @@ ax.grid(True, linestyle="--", color="grey", alpha=0.5)
 # show/save figure
 plt.show()
 
+
+# %%
+# let's retrieve the 10 closest vectors associated with each individual
+# target word (i.e., sport super-start)
+
+# empty containers
+embedding_clusters = []
+word_clusters = []
+# iterate over players
+for player in players:
+    # temporary lists
+    embeddings = []
+    words = []
+    for similar_word, _ in wv.most_similar(player, topn=10):
+        # retrieve words
+        words.append(similar_word)
+        # retrieve vectors
+        embeddings.append(wv[similar_word])
+    # append temporary lists
+    embedding_clusters.append(embeddings)
+    word_clusters.append(words)
 
 # %%
 # plotting the positions of the neighbor words
