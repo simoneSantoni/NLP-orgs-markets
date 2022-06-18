@@ -71,7 +71,7 @@ cs = np.empty(np.repeat(len(artists), 2))
 # iterate over the elements of vectors
 for i in range(len(artists)):
     for j in range(len(artists)):
-        cs[i, j] = 1 - cosine(vectors[i], vectors[j])
+        cs[i, j] = cosine(vectors[i], vectors[j])
 
 
 # %%
@@ -82,7 +82,7 @@ fig = plt.figure()
 # plot
 ax = fig.add_subplot(111)
 # using the matshow() function
-caxes = ax.matshow(cs, interpolation="nearest", cmap="inferno_r")
+caxes = ax.matshow(cs, interpolation="nearest", cmap="inferno")
 fig.colorbar(caxes)
 # axes
 ax.set_xticks(np.arange(0, len(artists), 1))

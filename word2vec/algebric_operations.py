@@ -20,7 +20,6 @@ To do    : None
 # load libraries
 from scipy import spatial
 import spacy
-import en_core_web_lg
 
 # %% 
 # load the model
