@@ -5,14 +5,14 @@
     whatlies.py    |    interactive viz of word vectors
 --------------------------------------------------------------------------------
 
-Author   : Simone Santoni, simone.santoni.1@city.ac.uk
+author   : simone santoni, simone.santoni.1@city.ac.uk
 
-Synopsis : This tutorial pursues the following learning goals:
+synopsis : this tutorial pursues the following learning goals:
    
            1. familiarizing with 'whatlies,' a dedicated libraries for the 
               visualization of word embeddings
 
-To do    : None
+to do    : none
 
 """
 
