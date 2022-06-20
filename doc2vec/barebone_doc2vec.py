@@ -1,3 +1,21 @@
+# !/usr/bin/env python3
+# -*- encoding utf-8 -*-
+"""
+--------------------------------------------------------------------------------
+    barebone_doc2vec.py    |    training a doc2vec model with minimal data
+--------------------------------------------------------------------------------
+
+author   : simone santoni, simone.santoni.1@city.ac.uk
+
+synopsis : this tutorial pursues the following learning goals:
+   
+           1. training a doc2vec embedding
+	       2. using the doc2vec embedding to appreciate an unseen document
+
+to do    : none
+
+"""
+
 # %%
 # libraries
 from nltk.tokenize import wordpunct_tokenize
@@ -13,24 +31,6 @@ quotes = [
     "I did not attend his funeral, but I sent a nice letter saying I approved of it",
     "So many books, so little time",
 ]
-# !/usr/bin/env python3
-# -*- encoding utf-8 -*-
-"""
---------------------------------------------------------------------------------
-    barebone_doc2vec.py    |    training a doc2vec model with minimal data
---------------------------------------------------------------------------------
-
-author   : simone santoni, simone.santoni.1@city.ac.uk
-
-synopsis : this tutorial pursues the following learning goals:
-   
-           1. training a doc2vec embedding
-	   2. using the doc2vec embedding to appreciate an unseen document
-
-to do    : none
-
-"""
-
 # %%
 # text pre-processing
 
