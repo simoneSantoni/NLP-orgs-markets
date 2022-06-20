@@ -52,7 +52,7 @@ model.save("quote_embedding.model")
 model = Doc2Vec.load("quote_embedding.model")
 
 # %%
-# project a new documen into the trained space vector
+# project a new document onto the trained space vector
 new_quote = "Time is an illusion. Lunchtime doubly so"
 new_vector = wordpunct_tokenize(new_quote.lower())
 model.docvecs.most_similar(positive=[model.infer_vector(new_vector)], topn=5)
