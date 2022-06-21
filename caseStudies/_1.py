@@ -11,14 +11,16 @@ Author   : Simone Santoni, simone.santoni.1@city.ac.uk
 
 Synopsis : this script presents some key snippets to discuss the first case 
            study of the NLP, orgs, and markets series on the inter-temporal
-	   similarity of beer reviews. In terms of scope/structure, the script 
-	   carries out the following tasks:
+	       similarity of beer reviews. In terms of scope/structure, the script 
+	       carries out the following tasks:
 
-	   - data loading
-	   - data wrangling
-	   - NLP pipeline
-	   - BoW vectorization
-	   - post-processing of the TFIDF vectors
+	       - data loading
+	       - data wrangling
+	       - NLP pipeline
+	       - BoW vectorization
+	       - post-processing of the TFIDF vectors
+           - visualization
+           - time series cluster analysis
 
 Notes    : NaN  
 
