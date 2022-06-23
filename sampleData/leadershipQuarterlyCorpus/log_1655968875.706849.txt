@@ -1,0 +1,16 @@
+2022-06-23 08:21:59,510 : INFO : collecting all words and their counts
+2022-06-23 08:21:59,510 : INFO : PROGRESS: at sentence #0, processed 0 words and 0 word types
+2022-06-23 08:21:59,581 : INFO : pruned out 0 tokens with count <=1 (before 50027, after 50027)
+2022-06-23 08:21:59,591 : INFO : pruned out 41510 tokens with count <=2 (before 50076, after 8566)
+2022-06-23 08:21:59,604 : INFO : collected 19605 word types from a corpus of 65595 words (unigram + bigrams) and 1156 sentences
+2022-06-23 08:21:59,604 : INFO : using 19605 counts as vocab in Phrases<0 vocab, min_count=50, threshold=5, max_vocab_size=50000>
+2022-06-23 08:21:59,605 : INFO : collecting all words and their counts
+2022-06-23 08:21:59,605 : INFO : PROGRESS: at sentence #0, processed 0 words and 0 word types
+2022-06-23 08:21:59,785 : INFO : pruned out 0 tokens with count <=1 (before 50031, after 50031)
+2022-06-23 08:21:59,796 : INFO : pruned out 41514 tokens with count <=2 (before 50080, after 8566)
+2022-06-23 08:21:59,840 : INFO : collected 19606 word types from a corpus of 65442 words (unigram + bigrams) and 1156 sentences
+2022-06-23 08:21:59,841 : INFO : using 19606 counts as vocab in Phrases<0 vocab, min_count=50, threshold=5, max_vocab_size=50000>
+2022-06-23 08:22:12,763 : INFO : adding document #0 to Dictionary(0 unique tokens: [])
+2022-06-23 08:22:12,818 : INFO : built Dictionary(7470 unique tokens: ['activity', 'analyze', 'art', 'articulate', 'ask']...) from 1156 documents (total 65384 corpus positions)
+2022-06-23 08:22:13,932 : INFO : serializing temporary corpus to /var/folders/54/ffslxghn48n3xk51ftrn_63cmjsv6g/T/72ea9a_corpus.txt
+2022-06-23 08:22:13,963 : INFO : converting temporary corpus to MALLET format with /Users/sbbk475/opt/mallet-2.0.8/bin/mallet import-file --preserve-case --keep-sequence --remove-stopwords --token-regex "\S+" --input /var/folders/54/ffslxghn48n3xk51ftrn_63cmjsv6g/T/72ea9a_corpus.txt --output /var/folders/54/ffslxghn48n3xk51ftrn_63cmjsv6g/T/72ea9a_corpus.mallet
