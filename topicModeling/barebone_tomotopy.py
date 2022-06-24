@@ -13,23 +13,27 @@ To do    : None
 
 """
 
-# %% load libraries
+# %%
+# load libraries
 import os
 import pandas as pd
 import spacy
-import en_core_web_lg
 import tomotopy as tp
 
-# %% working dir
-os.chdir("githubRepos/applied-NLP-smm694/data/tripadvisorReviews")
+# %%
+# working dir
+os.chdir("../sampleData/tripadvisorReviews")
 
-# %% read corpus
+# %% r
+# ead corpus
 in_f = "hotel_reviews.csv"
 df = pd.read_csv((in_f))
 
-# %% pass the corpus through a spaCy pipeline
+# %%
+# pass the corpus through a spaCy pipeline
+
 # initialize a pipeline
-nlp = en_core_web_lg.load()
+nlp = spacy.load("en_core_web_sm")
 # process data
 docs_tokens, tmp_tokens = [], []
 for item in df.loc[:, "Review"].to_list():
@@ -41,7 +45,9 @@ for item in df.loc[:, "Review"].to_list():
     docs_tokens.append(tmp_tokens)
     tmp_tokens = []
 
-# %% Tomotopy LDA estimation
+# %%
+# Tomotopy LDA estimation
+
 # create a corpus using tp utilities
 corpus = tp.utils.Corpus()
 # populate the corpus
@@ -52,10 +58,18 @@ lda = tp.LDAModel(k=10, corpus=corpus)
 # train the model
 for i in range(0, 100, 10):
     lda.train(10)
-    print('Iteration: {}\tLog-likelihood: {}'.format(i, lda.ll_per_word))
+    print("Iteration: {}\tLog-likelihood: {}".format(i, lda.ll_per_word))
 # display words by topics
 for k in range(lda.k):
     print("Top 10 words of topic #{}".format(k))
     print(lda.get_topic_words(k, top_n=10))
 # save model estimates
-lda.save('hotel_review_lda_estimates.bin')
+lda.save("hotel_review_lda_estimates.bin")
+
+# %%
+import numpy as np
+for k in range(lda.k):
+        print('Topic #{}'.format(k))
+        for word, prob in lda.get_topic_words(k):
+            print('\t', word, np.round(prob, 3), sep='\t')
+# %%
