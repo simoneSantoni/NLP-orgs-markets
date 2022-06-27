@@ -2,30 +2,34 @@
 # -*- encoding utf-8 -*-
 """
 ------------------------------------------------------------------------------
-    _7.py    |    topic modeling with Tomotopy
+    barebone_tomotopy.py    |    topic modeling with LDA and Tomotopy
 ------------------------------------------------------------------------------
 
 Author   : Simone Santoni, simone.santoni.1@city.ac.uk
 
 Synopsis : The script shows how to implement LDA Topic Modeling with Tomotopy
 
-To do    : None
+Notes    : None
 
 """
 
 # %%
 # load libraries
 import os
+import numpy as np
+import matplotlib.pyplot as plt
 import pandas as pd
 import spacy
 import tomotopy as tp
+from rich.console import Console
+from rich.table import Table
 
 # %%
 # working dir
 os.chdir("../sampleData/tripadvisorReviews")
 
-# %% r
-# ead corpus
+# %%
+# read corpus
 in_f = "hotel_reviews.csv"
 df = pd.read_csv((in_f))
 
@@ -59,17 +63,70 @@ lda = tp.LDAModel(k=10, corpus=corpus)
 for i in range(0, 100, 10):
     lda.train(10)
     print("Iteration: {}\tLog-likelihood: {}".format(i, lda.ll_per_word))
-# display words by topics
-for k in range(lda.k):
-    print("Top 10 words of topic #{}".format(k))
-    print(lda.get_topic_words(k, top_n=10))
-# save model estimates
-lda.save("hotel_review_lda_estimates.bin")
 
 # %%
-import numpy as np
+# inspect the output of the LDA algorithm
+
+# create a Rich's table to print the output of the spaCy's pipeline
+console = Console()
+# defin table properties
+table = Table(
+    show_header=True,
+    header_style="cyan",
+    title="[bold] [cyan] Word to topic probabilities (top 10 words)[/cyan]",
+    width=150,
+)
+# add columns
+table.add_column("Topic", justify="center", style="cyan", width=10)
+table.add_column("W 1", width=12)
+table.add_column("W 2", width=12)
+table.add_column("W 3", width=12)
+table.add_column("W 4", width=12)
+table.add_column("W 5", width=12)
+table.add_column("W 6", width=12)
+table.add_column("W 7", width=12)
+table.add_column("W 8", width=12)
+table.add_column("W 9", width=12)
+table.add_column("W 10", width=12)
+# add rows
 for k in range(lda.k):
-        print('Topic #{}'.format(k))
-        for word, prob in lda.get_topic_words(k):
-            print('\t', word, np.round(prob, 3), sep='\t')
+    values = []
+    for word, prob in lda.get_topic_words(k):
+        values.append("{}\n({})\n".format(word, str(np.round(prob, 3))))       
+    table.add_row(
+        str(k),
+        values[0],
+        values[1],
+        values[2],
+        values[3],
+        values[4],
+        values[5],
+        values[6],
+        values[7],
+        values[8],
+        values[9],
+    )
+# print the table
+table
+
 # %%
+# get the coherence score of the model
+
+# register the coherence of the estimated model
+coh = tp.coherence.Coherence(lda, coherence="u_mass")
+# model coherence
+average_coherence = coh.get_score()
+# topic coherence
+coherence_per_topic = [coh.get_score(topic_id=k) for k in range(lda.k)]
+# plot results
+fig = plt.figure()
+ax = fig.add_subplot(111)
+ax.bar(range(lda.k), coherence_per_topic)
+ax.set_xticks(range(lda.k))
+ax.set_xlabel("Topic number")
+ax.set_ylabel("Coherence score")
+plt.axhline(y=average_coherence, color="orange", linestyle="--")
+plt.show()
+
+# %%
+# that's it
