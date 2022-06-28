@@ -19,58 +19,36 @@ Notes    : the code has been tested with Gensim 3.8.3 and Mallet 2.0.8
 
 """
 
-# %% load libraries
+# %%
+# load libraries
 import os
-import bz2
-import pickle
-import _pickle as cPickle
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import rc
 import pandas as pd
+import spacy
 import gensim
 from gensim.corpora import Dictionary, MmCorpus
+from gensim.models import Phrases
 from gensim.models.ldamodel import LdaModel, CoherenceModel
-from gensim.models.wrappers import LdaMallet, ldamallet
 from gensim.similarities import MatrixSimilarity
 
-# %% working dir
+# %%
+# working dir
 os.chdir("../sampleData/econNewspaper")
 
-# %% utility functions
-# load any compressed pickle file
-def decompress_pickle(file):
-    data = bz2.BZ2File(file, 'rb')
-    data = pickle.load(data)
-    return data
+# %%
+# load data
 
-# %% viz options
-plt.style.use("seaborn-bright")
-rc("font", **{"family": "serif", "serif": ["Computer Modern Roman"]})
-rc("text", usetex=True)
-
-# %% external software
-mallet_path = "/Users/sbbk475/opt/mallet-2.0.8/bin/mallet"
-
-# %% load data
 # load corpus
 df = pd.read_csv("ft_wsj.csv")
-# load an existing dictionary for the corpus
-in_f = os.path.join("pr_dictionary.dict")
-dictionary = Dictionary.load(in_f)
-# load an existing representation for the corpus
-in_f = "pr_corpus.mm"
-corpus = MmCorpus(in_f)
-# load an existing transformation for the corpus that contains n-grams
-with open("pr_docs_phrased.pickle", "rb") as pipe:
-    docs_phrased = pickle.load(pipe)
-    
-data = bz2.BZ2File(in_f, 'rb')
-data = pickle.load(in_f)
-docs_phrased = decompress_pickle(in_f)
 
-# %% clean data read from Mongo
+# %%
+# clean data read from Mongo
+
 # basic cleaning
+# --+ date as date time
+df.loc[:, "date"] = pd.to_datetime(df.loc[:, "date"])
 # --+ get timespans
 df.loc[:, "year"] = df["date"].dt.year
 # --+ slice the data
@@ -78,75 +56,81 @@ df.loc[:, "year"] = df["date"].dt.year
 let's focus on the 2013 - 2019 timespan, which concentrates the large majority
 of the data.
 """
-df = df.loc[df["year"] >= 2009]
+df = df.loc[df["year"] >= 2013]
 # --+ drop column
 df.drop(["_id"], axis=1, inplace=True)
 
-# %% exploratory data analysis
-# barchart of the distribution of articles over time
-# --+ data series
-x = np.arange(2013, 2020, 1)
-y0 = df.loc[(df["outlet"] == "ft") & (df["year"] >= 2013)].groupby("year").size().values
-y0[-1] = 336
-y1 = (
-    df.loc[(df["outlet"] == "wsj") & (df["year"] >= 2013)].groupby("year").size().values
-)
-# --+ labels
-x_labels = ["%s" % i for i in x]
-y_labels = ["%s" % i for i in np.arange(0, 1400, 200)]
-for i, s in enumerate(y_labels):
-    if len(s) > 3:
-        y_labels[i] = "{},{}".format(s[0], s[1:])
-    else:
-        pass
-# --+ create figure
-fig = plt.figure(figsize=(6, 4))
-# --+ populate figure with a plot
-ax = fig.add_subplot(1, 1, 1)
-# --+ plot data
-ax.bar(
-    x, y0, color="k", width=0.6, alpha=0.50, edgecolor="white", label="Financial Times"
-)
-ax.bar(
-    x,
-    y1,
-    color="k",
-    width=0.6,
-    alpha=0.25,
-    edgecolor="white",
-    bottom=y0,
-    label="Wall Street Journal",
-)
-# --+ axis properties
-ax.set_xticks(x)
-ax.set_xticklabels(x_labels, fontsize=14, rotation="vertical")
-ax.set_xlabel("Year", fontsize=14)
-ax.set_yticklabels(y_labels, fontsize=14)
-ax.set_ylabel("Counts of documents", fontsize=14)
-# --+ hide all spines while preserving ticks
-ax.spines["right"].set_visible(False)
-ax.spines["top"].set_visible(False)
-ax.spines["bottom"].set_visible(False)
-ax.spines["left"].set_visible(False)
-ax.yaxis.set_ticks_position("left")
-ax.xaxis.set_ticks_position("bottom")
-ax.yaxis.set_ticks_position("left")
-ax.xaxis.set_ticks_position("bottom")
-# --+ grid
-ax.grid(True, ls="--", axis="y", color="white")
-# --+ legend
-plt.legend(loc="best")
-# --+ save plot
-out_f = os.path.join(
-    "scripts", "analysis", "topicModeling", ".output", "articles_over_time.pdf"
-)
-plt.savefig(out_f, bbox_inches="tight", pad_inches=0)
+# %%
+# pre-process the data w/spaCy
 
-# %% topic modeling ― explore model validity
+# the spaCy pipeline
+nlp = spacy.load("en_core_web_sm")
+# empty containers
+docs_tokens, tmp_tokens = [], []
+# iterate over the documents
+for doc in df.text.to_list():
+    tmp_tokens = [
+        token.lemma_
+        for token in nlp(doc)
+        if not token.is_stop and not token.is_punct and not token.like_num
+    ]
+    docs_tokens.append(tmp_tokens)
+    tmp_tokens = []
+
+# %%
+# find bigrams and trigrams
+
+# get rid of common terms
+common_terms = [
+    u"of",
+    u"with",
+    u"without",
+    u"and",
+    u"or",
+    u"the",
+    u"a",
+    u"not",
+    "be",
+    u"to",
+    u"this",
+    u"who",
+    u"in",
+]
+# find phrases
+bigram = Phrases(
+    docs_tokens,
+    min_count=50,
+    threshold=5,
+    max_vocab_size=50000,
+    common_terms=common_terms,
+)
+trigram = Phrases(
+    bigram[docs_tokens],
+    min_count=50,
+    threshold=5,
+    max_vocab_size=50000,
+    common_terms=common_terms,
+)
+# uncomment if bi-grammed, tokenized document is preferred
+# docs_phrased = [bigram[line] for line in docs_tokens]
+docs_phrased = [trigram[bigram[line]] for line in docs_tokens]
+
+
+# %%
+# create corpus and dictionary to pass to Gensim
+
+# dictionary
+dict = Dictionary(docs_phrased)
+# vector represenation of the documents
+corpus = [dict.doc2bow(doc) for doc in docs_phrased]
+
+
+# %%
+# topic modeling ― explore model validity
 
 # define function to explore a gamut of competing models
 def compute_coherence_values(
-    _dictionary, _corpus, _texts, _limit, _start, _step, _path, _seed
+    _dictionary, _corpus, _texts, _limit, _start, _step,
 ):
     """
     Compute c_v coherence for various number of topics
@@ -168,13 +152,7 @@ def compute_coherence_values(
     coherence_values = []
     model_list = []
     for num_topics in range(_start, _limit, _step):
-        model = gensim.models.wrappers.Lda(
-            mallet_path,
-            corpus=_corpus,
-            num_topics=num_topics,
-            id2word=_dictionary,
-            random_seed=_seed,
-        )
+        model = LdaModel(corpus=_corpus, num_topics=num_topics, id2word=_dictionary,)
         model_list.append(model)
         coherencemodel = CoherenceModel(
             model=model, texts=_texts, dictionary=_dictionary, coherence="c_v"
@@ -184,46 +162,23 @@ def compute_coherence_values(
     return model_list, coherence_values
 
 
+# %%
 # collect coherence scores as the number of retained topics change
-"""
-I make two searches:
-
-    - 5 - 10 topics, step = 1
-    - 10 - 30 topics, step = 5
-
-"""
 
 # 5 - 9 topic models
 # --+ search grid
 limit, start, step = 10, 5, 1
-
 # --+ run function
 ml_5_9, cv_5_9 = compute_coherence_values(
-    _dictionary=dictionary,
+    _dictionary=dict,
     _corpus=corpus,
     _texts=docs_phrased,
     _start=start,
     _limit=limit,
     _step=step,
-    _seed=123,
-    _path=mallet_path,
 )
 
-# 10 - 30 topic models
-# --+ search grid
-limit, start, step = 35, 10, 5
-# --+ run function
-ml_10_30, cv_10_30 = compute_coherence_values(
-    _dictionary=dictionary,
-    _corpus=corpus,
-    _texts=docs_phrased,
-    _start=start,
-    _limit=limit,
-    _step=step,
-    _seed=123,
-    _path=mallet_path,
-)
-
+# %%
 # plot collected coherence scores data
 # --+ create figure
 fig, [ax0, ax1] = plt.subplots(1, 2, figsize=(6, 4), sharey=True)
@@ -282,95 +237,19 @@ out_f = os.path.join("analysis", "topicModeling", ".output", "pr_coherence_score
 plt.savefig(out_f, transparent=True, bbox_inches="tight", pad_inches=0)
 
 
-# %% topic model estimation
+# %%
+# topic model estimation
 """
 I focus on two models:
     - 8 topics, ~ local optimum
     - 30 topic, ~ global optimum
 """
 
-# model with 8 topics
-# --+ estimate model
-lda_8 = LdaMallet(
-    mallet_path, corpus=corpus, id2word=dictionary, num_topics=8, random_seed=123
-)
-# --+ print topics (20 words per topic)
-lda_8.print_topics(num_topics=8, num_words=20)
-# --+ translate topic modeling outcome
-lda_8 = gensim.models.wrappers.ldamallet.malletmodel2ldamodel(lda_8)
-
-# --+ term-to-topic probabilities (10 words per topic)
-top_terms_line = lda_8.show_topics(num_topics=8, num_words=10)
-# ----+ rearrange data on top 10 terms per topic
-top_terms_m = []
-for i in top_terms_line:
-    topic_num = i[0]
-    prob_terms = i[1].split("+")
-    for term_sort, term in enumerate(prob_terms):
-        weight = float(term.split("*")[0])
-        term = term.split("*")[1].strip('"| ')
-        top_terms_m.append([topic_num, term_sort, weight, term])
-df = pd.DataFrame(top_terms_m)
-# ----+ rename columns
-old_names = [0, 1, 2, 3]
-new_names = ["topic_n", "term_sort", "weight", "term"]
-cols = dict(zip(old_names, new_names))
-df.rename(columns=cols, inplace=True)
-df.set_index(["term_sort", "topic_n"], inplace=True)
-df = df.unstack()
-# ----+ sidewaystable
-df_h = pd.DataFrame()
-for i in range(8):
-    terms = df["term"][i]
-    weights = df["weight"][i]
-    weights = pd.Series(["( %s )" % j for j in weights])
-    df_h = pd.concat([df_h, terms, weights], axis=1)
-# ----+ write data to file
-out_f = os.path.join(
-    "scripts", "analysis", "topicModeling", ".output", "8t_term_topic.tex"
-)
-df_h.to_latex(out_f, index=True)
-# --+ get transformed corpus as per the lda model
-transf_corpus = lda_8.get_document_topics(corpus)
-# ----+ rearrange data on document-topic pairs probabilities
-doc_topic_m = []
-for id, doc in enumerate(transf_corpus):
-    for topic in doc:
-        topic_n = topic[0]
-        topic_prob = topic[1]
-        doc_topic_m.append([id, topic_n, topic_prob])  # , topic_prob])
-# ----+ get a df
-df = pd.DataFrame(doc_topic_m)
-# ----+ rename columns
-old_names = [0, 1, 2]
-new_names = ["doc_id", "topic_n", "prob"]
-cols = dict(zip(old_names, new_names))
-df.rename(columns=cols, inplace=True)
-# ----+ dominant topic
-gr = df.groupby("doc_id")
-df.loc[:, "max"] = gr["prob"].transform(np.max)
-df.loc[:, "first_topic"] = 0
-df.loc[df["prob"] == df["max"], "first_topic"] = 1
-first_topic = df.loc[df["first_topic"] == 1]
-first_topic.set_index("doc_id", inplace=True)
-# ----+ arrange data as contingency table
-df = df.pivot_table(index="doc_id", columns="topic_n", values="prob", aggfunc=np.mean)
-# ----+ write data to files
-out_f = os.path.join(
-    "scripts", "analysis", "topicModeling", ".output", "8t_doc_topic_pr.csv"
-)
-df.to_csv(out_f, index=True)
-out_f = os.path.join(
-    "scripts", "analysis", "topicModeling", ".output", "8t_dominant_topics.csv"
-)
-first_topic.to_csv(out_f, index=True)
-
-
 # model with 30 topics
 # ----+ estimate model
 _path = "/home/simone/.mallet/mallet-2.0.8/bin/mallet"
-lda_30 = Lda(
-    mallet_path, corpus=corpus, id2word=dictionary, num_topics=30, random_seed=123
+lda_30 = LdaModel(
+    corpus=corpus, id2word=dict, num_topics=10
 )
 # ----+ print topics (20 words per topic)
 lda_30.print_topics(num_topics=30, num_words=20)
