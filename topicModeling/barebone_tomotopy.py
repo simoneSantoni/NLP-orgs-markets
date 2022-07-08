@@ -37,7 +37,7 @@ df = pd.read_csv((in_f))
 # pass the corpus through a spaCy pipeline
 
 # initialize a pipeline
-nlp = spacy.load("en_core_web_sm")
+nlp = spacy.load("en_core_web_lg")
 # process data
 docs_tokens, tmp_tokens = [], []
 for item in df.loc[:, "Review"].to_list():

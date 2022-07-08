@@ -48,7 +48,7 @@ os.chdir("../sampleData/econNewspaper")
 df = pd.read_csv("ft_wsj.csv")
 
 # %%
-# clean data read from Mongo
+# clean the data
 
 # basic cleaning
 # --+ date as date time
@@ -78,19 +78,20 @@ stopwords = ["Mr", "Mr.", "$", "Inc.", "year"]
 for item in stopwords:
     nlp.vocab[item].is_stop = True
 # empty containers
-docs_tokens, tmp_tokens = [], []
+docs_tokens = []
 # iterate over the documents
-for doc in df.text.to_list():
-    tmp_tokens = [
-        token.lemma_
-        for token in nlp(doc)
-        if not token.is_stop
-        and not token.is_punct
-        and not token.like_num
-        and token.lemma_ != "say"
-    ]
-    docs_tokens.append(tmp_tokens)
-    tmp_tokens = []
+for doc in nlp.pipe(
+    df.loc[:, "text"].to_list(),
+    batch_size=1000,
+    disable=["tok2vec", "tagger", "parser", "attribute_ruler"],
+):
+    docs_tokens.append(
+        [
+            token.lemma_
+            for token in doc
+            if not token.is_stop and not token.is_punct and not token.like_num
+        ]
+    )
 
 # %%
 # find bigrams and trigrams
@@ -144,7 +145,7 @@ for item in docs_phrased:
 
 # register "UMass" coherence scores
 cvs = {}
-for topic_number in range(1, 15, 1):
+for topic_number in range(1, 16, 1):
     mdl = tp.LDAModel(k=topic_number, corpus=corpus)
     for i in range(0, 100, 10):
         mdl.train(10)
@@ -157,14 +158,14 @@ ax = fig.add_subplot(111)
 ax.plot(cvs.keys(), cvs.values(), "o-")
 ax.set_xlabel("Number of topics retained")
 ax.set_ylabel("Coherence score")
-ax.set_xticks(range(1, 15, 1))
+ax.set_xticks(range(1, 16, 1))
 plt.show()
 
 # %%
 # topic model estimation
 
 # let's go with the six topic model
-best_mdl = tp.LDAModel(k=6, corpus=corpus)
+best_mdl = tp.LDAModel(k=11, corpus=corpus)
 for i in range(0, 100, 10):
     best_mdl.train(10)
     print("Iteration: {}\tLog-likelihood: {}".format(i, best_mdl.ll_per_word))
@@ -200,3 +201,5 @@ td = pd.DataFrame(
     columns=["topic_{}".format(i + 1) for i in range(best_mdl.k)],
 )
 
+
+# %%
