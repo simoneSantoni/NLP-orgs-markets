@@ -1,3 +1,25 @@
+#! /usr/env/bin python
+# -*- coding: utf-8 -*-
+
+"""
+------------------------------------------------------------------------------
+    pytorch.py    |     review classification with PyTorch
+------------------------------------------------------------------------------
+
+Author   : Simone Santoni, simone.santoni.1@city.ac.uk
+           
+           Kudos to the PyTorch people who worked on the tutorial:
+           https://pytorch.org/tutorials/beginner/text_sentiment_ngrams_tutorial.html 
+
+Synopsis : the script implements a text classification model using PyTorch. 
+           Using the YelpReviewPolarity dataset, the script trains a model
+           with a hiddenl embedd.bag layer and a linear layers to predict
+           bad and good reviews.
+
+Notes    : None
+
+"""
+
 # %%
 # load the data
 
@@ -13,7 +35,7 @@ train_iter = iter(YelpReviewPolarity(split='train'))
 next(train_iter)
 
 # %% 
-# buold the vocabulary
+# build the vocabulary
 
 # load libraries
 from torchtext.data.utils import get_tokenizer
