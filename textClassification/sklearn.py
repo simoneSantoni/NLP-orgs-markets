@@ -21,7 +21,6 @@ Notes    : none
 # load libraries
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
 import seaborn as sns
 import sklearn as sk
 import tomotopy as tp
@@ -84,6 +83,27 @@ for doc in docs:
             tmp.append(token.lemma_)
     tkns_docs.append(tmp)
     del tmp
-        
+
 
 # %%
+# train an LDA model
+
+# create a corpus using tp utilities
+corpus = tp.utils.Corpus()
+# populate the corpus
+for item in tkns_docs:
+    corpus.add_doc(words=item)
+# search for the best fitting model
+mf = {}
+for i in range(10, 260, 100):
+    print("Working on the model with {} topics ...\n".format(i), flush=True)
+    mdl = tp.LDAModel(k=i, corpus=corpus, min_df=5, rm_top=5, seed=42)
+    mdl.train(0)
+    for j in range(0, 10, 10):
+        mdl.train(10)
+        print("Iteration: {}\tLog-likelihood: {}".format(j, mdl.ll_per_word))
+    coh = tp.coherence.Coherence(mdl, coherence="u_mass")
+    mf[i] = coh.get_score()
+    mdl.save("k_{}".format(i), True)
+
+    # %%
